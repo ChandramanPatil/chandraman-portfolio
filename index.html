@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Chandraman S. Patil — Nanophotonics · Photonic AI · Robotics</title>
+<meta name="description" content="Dr. Chandraman S. Patil — scientist and engineer working at the intersection of nanophotonics, photonic AI accelerators, and autonomous robotics. Nature Photonics author, inventor, and Lead Robotics Research Engineer.">
+<meta name="author" content="Dr. Chandraman S. Patil">
+<meta name="theme-color" content="#060606">
+<link rel="canonical" href="https://chandramanpatil.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dr. Chandraman S. Patil — Engineering tomorrow with light">
+<meta property="og:description" content="Nanophotonics · Photonic AI · Autonomous Robotics. 1,019 citations · Nature Photonics · Applied Physics Reviews Featured Article of the Year.">
+<meta property="og:image" content="assets/hero-front.jpg">
+<meta property="og:site_name" content="Chandraman Patil">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@chandramanpatil">
+<meta name="twitter:title" content="Dr. Chandraman S. Patil — Engineering tomorrow with light">
+<meta name="twitter:image" content="assets/hero-front.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060606'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='26' font-weight='700' fill='%2335f2a4' text-anchor='middle'%3ECP%3C/text%3E%3C/svg%3E">
+
+<!-- Type system: Archivo (variable width/weight) · Instrument Serif (editorial italic) · IBM Plex Mono (instrument data) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chandraman S. Patil",
+  "honorificPrefix": "Dr.",
+  "jobTitle": "Lead Robotics Research Engineer",
+  "worksFor": { "@type": "Organization", "name": "HUMRO" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The George Washington University" },
+    { "@type": "CollegeOrUniversity", "name": "University of Mumbai" }
+  ],
+  "knowsAbout": ["Nanophotonics", "Photonic Integrated Circuits", "2D Materials", "Strainoptronics", "AI Accelerators", "Autonomous Mobile Robots"],
+  "email": "mailto:chandraman.patil@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/chandramanpatil",
+    "https://scholar.google.com/citations?user=6lqEg0QAAAAJ",
+    "https://twitter.com/chandramanpatil"
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   DR. CHANDRAMAN S. PATIL — CINEMATIC PORTFOLIO
+   Design system: ultra-black · ivory · instrument emerald
+   Type: Archivo (display, variable width) / Instrument Serif
+         (editorial italic) / IBM Plex Mono (lab data)
+   ============================================================ */
+
+:root{
+  --bg:        #060606;
+  --bg-2:      #0a0d0c;
+  --panel:     #0b0e0d;
+  --ink:       #eef0ea;
+  --ink-2:     rgba(238,240,234,.58);
+  --ink-3:     rgba(238,240,234,.34);
+  --line:      rgba(238,240,234,.10);
+  --line-2:    rgba(238,240,234,.20);
+  --em:        #35f2a4;                 /* instrument emerald — matches portrait rim light */
+  --em-dim:    rgba(53,242,164,.55);
+  --em-soft:   rgba(53,242,164,.10);
+  --f-d: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-s: "Instrument Serif", Georgia, serif;
+  --f-m: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+  --gutter: 6vw;
+  --ease: cubic-bezier(.16,1,.3,1);
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:auto; }
+html.lenis{ height:auto; }
+.lenis.lenis-smooth{ scroll-behavior:auto !important; }
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--f-d);
+  font-weight:340;
+  font-size:21px;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+::selection{ background:var(--em); color:#04110b; }
+img{ display:block; max-width:100%; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:0; }
+
+::-webkit-scrollbar{ width:10px; }
+::-webkit-scrollbar-track{ background:#070808; }
+::-webkit-scrollbar-thumb{ background:#1b201d; border-radius:99px; border:2px solid #070808; }
+::-webkit-scrollbar-thumb:hover{ background:#2a332e; }
+
+:focus-visible{ outline:1px solid var(--em); outline-offset:4px; border-radius:2px; }
+
+/* ---------- utilities ---------- */
+.mono{ font-family:var(--f-m); }
+.serif{ font-family:var(--f-s); font-style:italic; font-weight:400; letter-spacing:0; text-transform:none; }
+.em-c{ color:var(--em); }
+
+.label{
+  display:flex; align-items:center; gap:18px;
+  font-family:var(--f-m); font-size:11px; font-weight:500;
+  letter-spacing:.34em; text-transform:uppercase; color:var(--ink-3);
+  margin-bottom:clamp(2.4rem,5vh,4rem);
+}
+.label::after{ content:""; height:1px; flex:0 0 72px; background:var(--line-2); transform-origin:left; }
+.label .tick-dot{ width:5px; height:5px; border-radius:50%; background:var(--em); box-shadow:0 0 12px var(--em-dim); flex:none; }
+
+.sec{ position:relative; padding:16vh var(--gutter); max-width:1760px; margin:0 auto; }
+.sec--tight{ padding-top:10vh; }
+.rule{ height:1px; background:var(--line); border:0; }
+
+.h-ed{
+  font-weight:280; font-stretch:104%;
+  font-size:clamp(2.7rem,6.4vw,7.2rem);
+  line-height:1.02; letter-spacing:-.02em;
+  text-wrap:balance;
+}
+.h-ed .serif{ font-size:1.04em; color:var(--ink); }
+.h-ed .serif.gl{ color:var(--em); text-shadow:0 0 44px rgba(53,242,164,.25); }
+
+.mask{ display:block; overflow:hidden; }
+.mask .char, .mask .word{ display:inline-block; will-change:transform; }
+
+.hollow{
+  font-weight:800; font-stretch:116%;
+  -webkit-text-stroke:1px rgba(238,240,234,.34);
+  color:transparent; text-transform:uppercase;
+  letter-spacing:-.01em; line-height:.98;
+  transition:color .9s var(--ease), -webkit-text-stroke-color .9s var(--ease), text-shadow .9s var(--ease);
+}
+.hollow.is-fill{ color:var(--ink); -webkit-text-stroke-color:transparent; }
+.hollow.is-fill.em-fill{ color:var(--em); text-shadow:0 0 60px rgba(53,242,164,.28); }
+
+/* pill button — physical, spring-loaded */
+.btn{
+  position:relative; display:inline-flex; align-items:center; gap:14px;
+  padding:22px 46px; border:1px solid var(--line-2); border-radius:999px;
+  font-family:var(--f-m); font-size:12px; letter-spacing:.3em; text-transform:uppercase;
+  overflow:hidden; isolation:isolate; cursor:pointer;
+  transition:border-color .5s var(--ease), color .5s var(--ease);
+}
+.btn::before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:var(--em); border-radius:inherit;
+  transform:translateY(102%); transition:transform .6s var(--ease);
+}
+.btn:hover{ color:#04110b; border-color:var(--em); }
+.btn:hover::before{ transform:translateY(0); }
+.btn .arr{ transition:transform .5s var(--ease); }
+.btn:hover .arr{ transform:translate(4px,-4px); }
+
+/* ---------- atmosphere: grain + cursor light ---------- */
+.grain{
+  position:fixed; inset:-100px; z-index:98; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.05; mix-blend-mode:overlay;
+  animation:grain 7s steps(8) infinite;
+}
+@keyframes grain{
+  0%,100%{ transform:translate(0,0); } 12%{ transform:translate(-3%,2%); }
+  25%{ transform:translate(2%,-3%); } 37%{ transform:translate(-2%,-2%); }
+  50%{ transform:translate(3%,3%); }  62%{ transform:translate(-3%,1%); }
+  75%{ transform:translate(2%,2%); }  87%{ transform:translate(-1%,-3%); }
+}
+
+.vignette{
+  position:fixed; inset:0; z-index:97; pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(0,0,0,.5) 100%);
+}
+
+#cursor-glow{
+  position:fixed; top:0; left:0; z-index:96; pointer-events:none;
+  width:640px; height:640px; margin:-320px 0 0 -320px; border-radius:50%;
+  background:radial-gradient(circle, rgba(190,255,225,.075) 0%, rgba(53,242,164,.03) 38%, transparent 70%);
+  mix-blend-mode:screen; opacity:0;
+}
+#cursor-dot,#cursor-ring{ position:fixed; top:0; left:0; z-index:990; pointer-events:none; border-radius:50%; opacity:0; }
+#cursor-dot{ width:5px; height:5px; margin:-2.5px 0 0 -2.5px; background:var(--em); }
+#cursor-ring{
+  width:38px; height:38px; margin:-19px 0 0 -19px;
+  border:1px solid rgba(238,240,234,.35);
+  transition:width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease), border-color .35s, background .35s;
+}
+body.cursor-hover #cursor-ring{
+  width:70px; height:70px; margin:-35px 0 0 -35px;
+  border-color:var(--em-dim); background:rgba(53,242,164,.06);
+}
+@media (pointer:fine){
+  body.custom-cursor, body.custom-cursor a, body.custom-cursor button{ cursor:none; }
+}
+
+/* scroll progress */
+#progress{
+  position:fixed; top:0; left:0; right:0; height:2px; z-index:960;
+  background:linear-gradient(90deg, var(--em), #9df7cf);
+  transform-origin:left; transform:scaleX(0);
+  box-shadow:0 0 14px rgba(53,242,164,.5);
+}
+
+/* ---------- preloader ---------- */
+#loader{
+  position:fixed; inset:0; z-index:1000; background:var(--bg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:34px; text-align:center; padding:0 24px;
+}
+#loader .l-tag{ font-family:var(--f-m); font-size:10px; letter-spacing:.42em; text-transform:uppercase; color:var(--ink-3); }
+#loader .l-line{
+  font-family:var(--f-s); font-style:italic; font-weight:400;
+  font-size:clamp(1.7rem,4.4vw,3.4rem); color:var(--ink); line-height:1.25;
+}
+#loader .l-line .char{ display:inline-block; }
+#loader .l-bar{ width:min(320px,60vw); height:1px; background:var(--line); position:relative; overflow:hidden; }
+#loader .l-bar i{ position:absolute; inset:0; background:var(--em); transform-origin:left; transform:scaleX(0); box-shadow:0 0 16px var(--em-dim); }
+#loader .l-num{ font-family:var(--f-m); font-size:11px; letter-spacing:.3em; color:var(--ink-3); }
+
+/* ---------- navigation ---------- */
+#nav{
+  position:fixed; top:0; left:0; right:0; z-index:950;
+  display:flex; align-items:center; justify-content:flex-end;
+  padding:26px var(--gutter);
+  mix-blend-mode:difference;
+}
+#nav .n-right{ display:flex; align-items:center; gap:34px; font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; }
+#nav #clock{ color:var(--ink-2); }
+#menu-btn{ display:flex; align-items:center; gap:12px; letter-spacing:.3em; }
+#menu-btn .mi{ position:relative; width:22px; height:10px; }
+#menu-btn .mi::before,#menu-btn .mi::after{
+  content:""; position:absolute; left:0; right:0; height:1px; background:currentColor;
+  transition:transform .5s var(--ease), top .5s var(--ease);
+}
+#menu-btn .mi::before{ top:0; } #menu-btn .mi::after{ top:9px; }
+body.menu-open #menu-btn .mi::before{ top:4.5px; transform:rotate(45deg); }
+body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
+
+#menu{
+  position:fixed; inset:0; z-index:940; background:rgba(5,6,6,.97);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  transform:translateY(-100%); visibility:hidden;
+  display:flex; align-items:flex-end;
+  padding:16vh var(--gutter) 9vh;
+}
+#menu .m-grid{ display:grid; grid-template-columns:1.4fr .8fr; gap:6vw; width:100%; align-items:end; }
+#menu .m-links a{
+  display:flex; align-items:baseline; gap:22px;
+  font-weight:750; font-stretch:114%; text-transform:uppercase; letter-spacing:-.01em;
+  font-size:clamp(2rem,5.4vw,4.6rem); line-height:1.14; color:var(--ink-2);
+  transition:color .45s var(--ease), letter-spacing .45s var(--ease);
+}
+#menu .m-links a:hover{ color:var(--ink); letter-spacing:.005em; }
+#menu .m-links a sup{ font-family:var(--f-m); font-weight:400; font-size:11px; letter-spacing:.28em; color:var(--em); }
+#menu .m-side{ display:flex; flex-direction:column; gap:26px; font-family:var(--f-m); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-2); }
+#menu .m-side a:hover{ color:var(--em); }
+#menu .m-side .m-cap{ color:var(--ink-3); font-size:10px; letter-spacing:.34em; }
+
+/* section index dots */
+#dots{ position:fixed; right:26px; top:50%; transform:translateY(-50%); z-index:930; display:flex; flex-direction:column; gap:16px; }
+#dots a{ position:relative; width:8px; height:8px; display:block; }
+#dots a i{ position:absolute; inset:2px; border-radius:50%; background:var(--ink-3); transition:.4s var(--ease); }
+#dots a span{
+  position:absolute; right:22px; top:50%; transform:translateY(-50%) translateX(6px);
+  font-family:var(--f-m); font-size:10px; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--ink-2); white-space:nowrap; opacity:0; transition:.35s var(--ease); pointer-events:none;
+}
+#dots a:hover span{ opacity:1; transform:translateY(-50%) translateX(0); }
+#dots a.active i{ background:var(--em); box-shadow:0 0 12px var(--em-dim); transform:scale(1.35); }
+
+/* ============================================================
+   01 · HERO — the typography sandwich
+   ============================================================ */
+#hero{ position:relative; min-height:100vh; overflow:hidden; }
+#field{ position:absolute; inset:0; z-index:1; opacity:.8; }
+.hero-glow{
+  position:absolute; z-index:2; left:50%; top:56%; width:min(90vw,1100px); aspect-ratio:1.4;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(closest-side, rgba(53,242,164,.14), rgba(53,242,164,.045) 45%, transparent 72%);
+  filter:blur(10px); pointer-events:none;
+}
+.hero-stage{
+  position:relative; z-index:3; min-height:100vh;
+  display:flex; align-items:center; justify-content:center;
+}
+.name-stack{ position:relative; text-align:center; width:100%; }
+.name-line{
+  font-weight:800; font-stretch:118%; text-transform:uppercase;
+  font-size:clamp(3rem,10.2vw,11.6rem);
+  line-height:.86; letter-spacing:-.018em; white-space:nowrap;
+}
+.name-line .char{ will-change:transform; }
+.nl-back{ position:relative; z-index:1; color:var(--ink); }
+.nl-front{ position:relative; z-index:3; margin-top:.22em;
+  color:transparent; -webkit-text-stroke:1.5px rgba(238,240,234,.9);
+  text-shadow:0 24px 60px rgba(0,0,0,.7);
+}
+.nl-front .fill{ color:var(--ink); -webkit-text-stroke:0; }
+.hero-dr{
+  position:absolute; z-index:4; left:8vw; top:-1.7em;
+  font-family:var(--f-s); font-style:italic; font-size:clamp(1.2rem,2.6vw,2.2rem);
+  color:var(--em); text-shadow:0 0 30px rgba(53,242,164,.35);
+}
+.portrait-wrap{
+  position:absolute; z-index:2; left:50%; bottom:-9vh;
+  transform:translateX(-50%);
+  width:clamp(300px,34vw,520px); pointer-events:none;
+  will-change:transform;
+}
+.portrait-wrap::before{
+  content:""; position:absolute; left:12%; right:12%; top:16%; bottom:6%;
+  background:radial-gradient(closest-side, rgba(53,242,164,.20), transparent 70%);
+  filter:blur(60px);
+}
+.portrait-wrap img{
+  position:relative; width:100%;
+  filter:saturate(1.06) contrast(1.04) drop-shadow(0 30px 70px rgba(0,0,0,.65));
+  -webkit-mask-image:linear-gradient(to bottom,#000 76%,transparent 99%);
+          mask-image:linear-gradient(to bottom,#000 76%,transparent 99%);
+}
+.hero-meta{
+  position:absolute; z-index:5; font-family:var(--f-m); font-size:10.5px;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--ink-2); line-height:2.1;
+}
+.hm-tl{ top:110px; left:var(--gutter); }
+.hm-tr{ top:110px; right:var(--gutter); text-align:right; }
+.hm-bl{ bottom:44px; left:var(--gutter); display:flex; align-items:center; gap:16px; }
+.hm-br{ bottom:44px; right:var(--gutter); text-align:right; }
+.hero-meta .em-c{ color:var(--em); }
+.scroll-cue{ width:1px; height:56px; background:var(--line-2); position:relative; overflow:hidden; }
+.scroll-cue i{ position:absolute; left:0; top:-100%; width:100%; height:100%; background:var(--em); animation:cue 2.2s var(--ease) infinite; }
+@keyframes cue{ 0%{ top:-100%; } 55%{ top:0; } 100%{ top:100%; } }
+
+/* role ticker */
+.ticker{
+  position:absolute; z-index:4; left:0; right:0; bottom:0;
+  border-top:1px solid var(--line); padding:14px 0; overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  background:rgba(6,6,6,.4); backdrop-filter:blur(4px);
+}
+.ticker .t-track{ display:flex; width:max-content; animation:tick 46s linear infinite; }
+.ticker span{
+  font-family:var(--f-m); font-size:11px; letter-spacing:.4em; text-transform:uppercase;
+  color:var(--ink-2); padding:0 34px; white-space:nowrap;
+}
+.ticker span b{ color:var(--em); font-weight:400; padding-right:34px; }
+@keyframes tick{ to{ transform:translateX(-50%); } }
+
+/* ============================================================
+   02 · IDENTITY
+   ============================================================ */
+#identity .id-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:6vw; align-items:start; }
+.id-words-wrap{ position:relative; }
+.id-words-wrap::before{
+  content:""; position:absolute; right:-4%; top:46%; width:62%; aspect-ratio:1;
+  transform:translateY(-50%); pointer-events:none;
+  background:radial-gradient(closest-side, rgba(53,242,164,.16), transparent 72%);
+  filter:blur(34px);
+}
+.id-portrait{
+  position:absolute; right:-2%; bottom:-5%; z-index:0;
+  width:clamp(240px,23vw,400px); pointer-events:none;
+  filter:saturate(1.05) contrast(1.03) drop-shadow(0 26px 60px rgba(0,0,0,.6));
+  -webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent 98%);
+          mask-image:linear-gradient(to bottom,#000 74%,transparent 98%);
+}
+.id-words{ position:relative; z-index:1; display:flex; flex-direction:column; gap:.4vh; margin-top:5vh; }
+.id-words .hollow{ font-size:clamp(2.9rem,7.8vw,8.6rem); }
+.id-copy{ max-width:56ch; display:flex; flex-direction:column; gap:1.6em; font-size:clamp(1.25rem,1.5vw,1.45rem); color:var(--ink-2); font-weight:360; }
+.id-copy strong{ color:var(--ink); font-weight:520; }
+.collab{ position:relative; z-index:1; margin-top:4vh; font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); line-height:2.4; }
+.collab b{ color:var(--ink-2); font-weight:500; }
+
+/* ============================================================
+   03 · JOURNEY — horizontal documentary timeline
+   ============================================================ */
+#journey{ position:relative; overflow:hidden; padding:0; max-width:none; }
+#journey .j-head{ padding:14vh var(--gutter) 0; max-width:1760px; margin:0 auto; }
+.j-pin{ display:flex; flex-direction:column; justify-content:center; }
+.j-wrap{ height:78vh; display:flex; align-items:center; overflow:hidden; }
+.j-track{ display:flex; width:max-content; padding:0 var(--gutter); will-change:transform; }
+.j-panel{
+  flex:none; width:clamp(340px,36vw,540px);
+  border-left:1px solid var(--line); padding:2vh 4vw 2vh 2.2vw; margin-right:2vw;
+}
+.j-panel .j-year{
+  font-weight:180; font-stretch:112%; font-size:clamp(3.4rem,7.6vw,7.6rem);
+  line-height:1; color:var(--ink); letter-spacing:-.02em;
+}
+.j-panel.j-hi .j-year{ color:var(--em); text-shadow:0 0 50px rgba(53,242,164,.25); }
+.j-panel .j-tag{ font-family:var(--f-m); font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--em-dim); margin:18px 0 10px; }
+.j-panel h3{ font-weight:520; font-size:clamp(1.15rem,1.6vw,1.5rem); letter-spacing:-.01em; margin-bottom:12px; }
+.j-panel p{ color:var(--ink-2); font-size:1.25rem; max-width:34ch; }
+.j-progress{ height:1px; background:var(--line); margin:0 var(--gutter) 12vh; position:relative; }
+.j-progress i{ position:absolute; inset:0; background:var(--em); transform-origin:left; transform:scaleX(0); box-shadow:0 0 12px var(--em-dim); }
+
+/* ============================================================
+   04 · RESEARCH — the exhibition
+   ============================================================ */
+#research .r-note{ font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); margin:-2rem 0 5rem; }
+#research .r-note a{ color:var(--em-dim); } #research .r-note a:hover{ color:var(--em); }
+.r-list{ border-top:1px solid var(--line); }
+.rrow{
+  display:grid; grid-template-columns:86px 1fr auto; gap:3vw; align-items:baseline;
+  padding:44px 0 40px; border-bottom:1px solid var(--line);
+  position:relative; transition:padding .5s var(--ease);
+}
+.rrow::before{
+  content:""; position:absolute; inset:0 -2vw; background:linear-gradient(90deg, rgba(53,242,164,.05), transparent 60%);
+  opacity:0; transition:opacity .5s var(--ease); pointer-events:none;
+}
+.rrow:hover::before, .rrow:focus-within::before{ opacity:1; }
+.rrow .r-idx{ font-family:var(--f-m); font-size:12px; letter-spacing:.24em; color:var(--ink-3); transition:color .4s; }
+.rrow:hover .r-idx{ color:var(--em); }
+.rrow .r-main h3{
+  font-weight:440; font-stretch:102%; font-size:clamp(1.3rem,2.5vw,2.3rem);
+  line-height:1.16; letter-spacing:-.015em; max-width:26ch;
+  transition:transform .55s var(--ease), color .4s;
+}
+.rrow:hover .r-main h3{ transform:translateX(14px); }
+.rrow .r-sub{
+  max-height:0; opacity:0; overflow:hidden;
+  transition:max-height .6s var(--ease), opacity .5s var(--ease), margin .5s var(--ease);
+  color:var(--ink-2); font-size:1.2rem; max-width:62ch;
+}
+.rrow:hover .r-sub, .rrow:focus-within .r-sub{ max-height:130px; opacity:1; margin-top:16px; }
+.r-badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+.r-badges em{
+  font-style:normal; font-family:var(--f-m); font-size:9.5px; letter-spacing:.24em; text-transform:uppercase;
+  border:1px solid var(--line-2); border-radius:99px; padding:6px 13px; color:var(--ink-2);
+}
+.r-badges em.aw{ border-color:rgba(53,242,164,.4); color:var(--em); }
+.r-meta{ text-align:right; font-family:var(--f-m); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); line-height:2.1; }
+.r-meta .r-cites{ display:block; font-size:clamp(1.5rem,2.4vw,2.2rem); letter-spacing:0; color:var(--ink); font-family:var(--f-d); font-weight:220; }
+.rrow:hover .r-cites{ color:var(--em); }
+.r-all{ display:flex; justify-content:flex-end; padding-top:4vh; }
+
+/* ============================================================
+   05 · SYSTEMS — animated expertise
+   ============================================================ */
+.t-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+.t-card{ background:var(--panel); padding:clamp(1.8rem,3vw,3rem); min-height:380px; display:flex; flex-direction:column; gap:22px; position:relative; overflow:hidden; }
+.t-card:hover .t-viz{ opacity:1; }
+.t-viz{ height:150px; opacity:.85; transition:opacity .5s; }
+.t-viz svg{ width:100%; height:100%; overflow:visible; }
+.t-card h3{ font-weight:520; font-size:clamp(1.1rem,1.5vw,1.4rem); letter-spacing:-.01em; }
+.t-card p{ color:var(--ink-2); font-size:1.2rem; max-width:44ch; }
+.t-card .t-tags{ margin-top:auto; font-family:var(--f-m); font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-3); line-height:2.2; }
+
+@keyframes flow{ to{ stroke-dashoffset:-240; } }
+@keyframes flowSlow{ to{ stroke-dashoffset:-400; } }
+@keyframes blip{ 0%,100%{ opacity:.15; } 50%{ opacity:1; } }
+@keyframes ringPulse{ 0%,100%{ transform:scale(1); opacity:.9; } 50%{ transform:scale(1.12); opacity:.4; } }
+.wave-path{ fill:none; stroke:var(--em); stroke-width:1.4; stroke-dasharray:6 10; animation:flow 6s linear infinite; opacity:.8; }
+.wave-path.w2{ stroke:rgba(238,240,234,.5); animation-duration:9s; }
+.wave-path.w3{ stroke:rgba(53,242,164,.4); animation-duration:12s; animation-direction:reverse; }
+.ring-res{ fill:none; stroke:var(--em); stroke-width:1.4; transform-origin:center; transform-box:fill-box; animation:ringPulse 3.2s var(--ease) infinite; }
+.hex{ fill:none; stroke:rgba(238,240,234,.4); stroke-width:1; animation:blip 4s ease-in-out infinite; }
+.hex.h-em{ stroke:var(--em); }
+.node{ fill:rgba(238,240,234,.75); animation:blip 2.8s ease-in-out infinite; }
+.node.n-em{ fill:var(--em); }
+.link-line{ stroke:rgba(238,240,234,.22); stroke-width:1; }
+.link-line.hot{ stroke:var(--em-dim); stroke-dasharray:4 8; animation:flow 4s linear infinite; }
+.bot-grid{ stroke:rgba(238,240,234,.10); stroke-width:1; }
+.bot-path{ fill:none; stroke:var(--em); stroke-width:1.6; stroke-dasharray:10 240; stroke-linecap:round; animation:flowSlow 7s linear infinite; }
+.bot-path.ghost{ stroke:rgba(238,240,234,.25); stroke-dasharray:2 8; animation:none; }
+
+.stack-strip{
+  margin-top:8vh; padding:4.5vh 0 1vh; border-top:1px solid var(--line);
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+}
+.stack-strip .s-track{ display:flex; width:max-content; animation:tick 64s linear infinite; }
+.stack-strip span{
+  font-family:var(--f-m); font-size:13.5px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--ink-2); padding:0 30px; white-space:nowrap;
+}
+.stack-strip span b{ color:var(--em); font-weight:400; padding-left:30px; }
+
+/* ============================================================
+   06 · FLAGSHIP WORK
+   ============================================================ */
+.project{ display:grid; grid-template-columns:1fr 1fr; gap:6vw; align-items:center; padding:12vh 0; border-top:1px solid var(--line); }
+.project:first-of-type{ border-top:0; padding-top:4vh; }
+.project.rev .p-visual{ order:2; }
+.p-kicker{ font-family:var(--f-m); font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:var(--em-dim); margin-bottom:20px; }
+.project h3{ font-weight:300; font-stretch:104%; font-size:clamp(2rem,4.2vw,4.4rem); line-height:1.02; letter-spacing:-.02em; margin-bottom:26px; text-wrap:balance; }
+.project h3 .serif{ color:var(--em); }
+.project .p-desc{ color:var(--ink-2); max-width:52ch; margin-bottom:34px; }
+.p-metrics{ list-style:none; border-top:1px solid var(--line); }
+.p-metrics li{
+  display:flex; justify-content:space-between; gap:24px; padding:13px 0;
+  border-bottom:1px solid var(--line);
+  font-family:var(--f-m); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+}
+.p-metrics li b{ font-weight:400; color:var(--ink-3); }
+.p-metrics li span{ color:var(--ink-2); text-align:right; }
+.p-metrics li span.em-c{ color:var(--em); }
+.p-visual{ position:relative; aspect-ratio:4/3.4; border:1px solid var(--line); background:radial-gradient(120% 120% at 30% 20%, #0c100e, #070908); overflow:hidden; }
+.p-visual svg{ position:absolute; inset:0; width:100%; height:100%; }
+.p-visual .pv-cap{
+  position:absolute; left:18px; bottom:14px; font-family:var(--f-m); font-size:9.5px;
+  letter-spacing:.28em; text-transform:uppercase; color:var(--ink-3);
+}
+
+/* flake stack anim (2DMTS) */
+@keyframes settle{ 0%{ transform:translateY(-26px); opacity:0; } 12%{ opacity:1; } 82%{ transform:translateY(0); opacity:1; } 100%{ opacity:1; } }
+.flake{ animation:settle 5.5s var(--ease) infinite; transform-box:fill-box; }
+.flake.f2{ animation-delay:.9s; } .flake.f3{ animation-delay:1.8s; } .flake.f4{ animation-delay:2.7s; }
+
+/* strain lattice */
+@keyframes strainX{ 0%,100%{ transform:scaleX(1); } 50%{ transform:scaleX(1.075); } }
+.strain-group{ animation:strainX 5s ease-in-out infinite; transform-origin:center; transform-box:fill-box; }
+@keyframes photonRun{ 0%{ offset-distance:0%; opacity:0; } 8%{ opacity:1; } 92%{ opacity:1; } 100%{ offset-distance:100%; opacity:0; } }
+
+/* full-bleed HUMRO chapter */
+.p-bleed{
+  position:relative; min-height:104vh; margin-top:10vh;
+  display:flex; align-items:flex-end; overflow:hidden;
+}
+.p-bleed .bg{ position:absolute; inset:-12% 0; }
+.p-bleed .bg img{ width:100%; height:100%; object-fit:cover; filter:saturate(1.05) brightness(.86); will-change:transform; }
+.p-bleed .bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(6,6,6,.86) 0%, rgba(6,6,6,.22) 42%, rgba(6,6,6,.9) 100%);
+}
+.p-bleed .p-inner{ position:relative; z-index:2; width:100%; max-width:1760px; margin:0 auto; padding:0 var(--gutter) 10vh; display:grid; grid-template-columns:1.2fr .8fr; gap:6vw; align-items:end; }
+.p-bleed h3{ font-weight:300; font-stretch:106%; font-size:clamp(2.4rem,5.6vw,6rem); line-height:1; letter-spacing:-.022em; text-wrap:balance; }
+.p-bleed h3 .serif{ color:var(--em); }
+.p-bleed .p-desc{ color:var(--ink-2); max-width:46ch; margin-top:22px; }
+.p-bleed .p-metrics{ background:rgba(6,6,6,.55); backdrop-filter:blur(8px); border:1px solid var(--line); padding:6px 22px; }
+
+/* ============================================================
+   07 · MEASURES — editorial numbers
+   ============================================================ */
+#numbers .num-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.num{ padding:7vh 2vw 6vh; border-right:1px solid var(--line); }
+.num:last-child{ border-right:0; }
+.num .n-val{
+  font-weight:190; font-stretch:112%; font-size:clamp(3rem,5.6vw,6rem);
+  line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums;
+}
+.num .n-val i{ font-style:normal; color:var(--em); font-weight:300; }
+.num .n-lab{ margin-top:18px; font-family:var(--f-m); font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-3); line-height:2; }
+.num-foot{ padding-top:3.6vh; font-family:var(--f-m); font-size:10.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-3); line-height:2.4; }
+.num-foot i{ font-style:normal; color:var(--em-dim); padding:0 .7em; }
+
+/* ============================================================
+   08 · PHILOSOPHY — full-bleed meditation
+   ============================================================ */
+#philosophy{ position:relative; min-height:108vh; display:grid; place-items:center; overflow:hidden; padding:18vh var(--gutter); max-width:none; }
+#philosophy .ph-bg{ position:absolute; inset:-12% 0; z-index:0; }
+#philosophy .ph-bg img{ width:100%; height:100%; object-fit:cover; opacity:.42; filter:saturate(.95) brightness(.85); will-change:transform; }
+#philosophy .ph-bg::after{ content:""; position:absolute; inset:0; background:radial-gradient(90% 80% at 50% 45%, rgba(6,6,6,.42), rgba(6,6,6,.94)); }
+.ph-inner{ position:relative; z-index:2; max-width:1060px; text-align:center; }
+.ph-quote{
+  font-family:var(--f-s); font-style:italic; font-weight:400;
+  font-size:clamp(1.9rem,4.4vw,3.9rem); line-height:1.3; text-wrap:balance;
+}
+.ph-quote .word{ display:inline-block; }
+.ph-quote .gl{ color:var(--em); }
+.ph-attrib{ margin-top:4vh; font-family:var(--f-m); font-size:10.5px; letter-spacing:.34em; text-transform:uppercase; color:var(--ink-3); }
+.ph-own{ margin-top:8vh; font-weight:640; font-stretch:112%; text-transform:uppercase; letter-spacing:.12em; font-size:clamp(.8rem,1.35vw,1.15rem); color:var(--ink); }
+.ph-own i{ font-style:normal; color:var(--em); }
+
+/* ============================================================
+   09 · RECOGNITION — the credits
+   ============================================================ */
+.cred{ border-top:1px solid var(--line); }
+.cred li{
+  list-style:none; display:grid; grid-template-columns:1.1fr 1fr auto; gap:3vw; align-items:baseline;
+  padding:26px 0; border-bottom:1px solid var(--line); transition:background .4s;
+}
+.cred li:hover{ background:linear-gradient(90deg, rgba(53,242,164,.04), transparent 55%); }
+.cred .c-what{ font-weight:460; font-size:clamp(1.02rem,1.5vw,1.35rem); letter-spacing:-.01em; }
+.cred .c-who{ color:var(--ink-2); font-size:1.15rem; }
+.cred .c-when{ font-family:var(--f-m); font-size:11px; letter-spacing:.24em; color:var(--ink-3); text-transform:uppercase; }
+.cred li:hover .c-when{ color:var(--em); }
+
+/* ============================================================
+   10 · TRAJECTORY — future vision
+   ============================================================ */
+.v-list{ border-top:1px solid var(--line); }
+.v-row{
+  display:flex; align-items:baseline; justify-content:space-between; gap:4vw;
+  padding:4.6vh 0; border-bottom:1px solid var(--line); position:relative;
+}
+.v-row .v-name{
+  font-weight:800; font-stretch:115%; text-transform:uppercase;
+  font-size:clamp(1.9rem,5.4vw,5.6rem); line-height:1; letter-spacing:-.015em;
+  -webkit-text-stroke:1px rgba(238,240,234,.32); color:transparent;
+  transition:color .6s var(--ease), -webkit-text-stroke-color .6s var(--ease), transform .6s var(--ease), text-shadow .6s var(--ease);
+}
+.v-row:hover .v-name{ color:var(--em); -webkit-text-stroke-color:transparent; transform:translateX(1.6vw); text-shadow:0 0 70px rgba(53,242,164,.3); }
+.v-row .v-sub{ font-family:var(--f-m); font-size:10.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); text-align:right; max-width:34ch; line-height:2; }
+.v-row .v-arr{ position:absolute; left:-2.6vw; top:50%; transform:translateY(-50%); color:var(--em); opacity:0; transition:.5s var(--ease); font-size:1.4rem; }
+.v-row:hover .v-arr{ opacity:1; left:-1.6vw; }
+
+/* ============================================================
+   11 · CONTACT + FOOTER
+   ============================================================ */
+#contact{ text-align:center; padding-bottom:8vh; }
+#contact .c-head{ font-weight:280; font-stretch:104%; font-size:clamp(2.8rem,7.4vw,8rem); line-height:1.02; letter-spacing:-.022em; text-wrap:balance; }
+#contact .c-head .serif{ color:var(--em); text-shadow:0 0 60px rgba(53,242,164,.25); }
+#contact .c-sub{ margin:4.5vh auto 6vh; max-width:52ch; color:var(--ink-2); }
+.c-links{ margin-top:7vh; display:flex; justify-content:center; gap:clamp(1.6rem,4vw,4rem); flex-wrap:wrap; font-family:var(--f-m); font-size:11px; letter-spacing:.3em; text-transform:uppercase; }
+.c-links a{ color:var(--ink-2); position:relative; padding-bottom:6px; }
+.c-links a::after{ content:""; position:absolute; left:0; bottom:0; height:1px; width:100%; background:var(--em); transform:scaleX(0); transform-origin:right; transition:transform .5s var(--ease); }
+.c-links a:hover{ color:var(--em); }
+.c-links a:hover::after{ transform:scaleX(1); transform-origin:left; }
+footer{
+  display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  padding:5vh var(--gutter) 4vh; max-width:1760px; margin:0 auto;
+  border-top:1px solid var(--line);
+  font-family:var(--f-m); font-size:10px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3);
+}
+footer a:hover{ color:var(--em); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1100px){
+  #dots{ display:none; }
+  .t-grid{ grid-template-columns:1fr; }
+}
+@media (max-width:900px){
+  :root{ --gutter:6.4vw; }
+  .name-line{ font-size:clamp(2.4rem,11.4vw,6.4rem); }
+  .portrait-wrap{ width:min(74vw,380px); bottom:-4vh; }
+  .hm-tr,.hm-br{ display:none; }
+  #identity .id-grid{ grid-template-columns:1fr; }
+  .id-portrait{ width:min(56vw,320px); right:0; opacity:.9; }
+  .j-wrap{ height:auto; padding:2vh 0 4vh; }
+  .j-track{ flex-direction:column; width:auto; padding:0 var(--gutter); }
+  .j-panel{ width:auto; margin:0 0 7vh; padding-right:0; }
+  .j-progress{ display:none; }
+  .rrow{ grid-template-columns:1fr; gap:14px; }
+  .rrow .r-meta{ text-align:left; display:flex; gap:22px; align-items:baseline; }
+  .rrow .r-sub{ max-height:none; opacity:1; margin-top:12px; }
+  .project,.project.rev{ grid-template-columns:1fr; }
+  .project.rev .p-visual{ order:0; }
+  .p-bleed .p-inner{ grid-template-columns:1fr; }
+  #menu .m-grid{ grid-template-columns:1fr; gap:8vh; }
+  .cred li{ grid-template-columns:1fr; gap:6px; padding:22px 0; }
+  .v-row{ flex-direction:column; align-items:flex-start; gap:14px; }
+  .v-row .v-sub{ text-align:left; }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+  .grain{ display:none; }
+  .ticker .t-track, .stack-strip .s-track{ animation:none; }
+  html{ scroll-behavior:auto; }
+}
+</style>
+</head>
+<body class="custom-cursor">
+
+<!-- ======================= ATMOSPHERE ======================= -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ======================= PRELOADER ======================== -->
+<div id="loader" role="status" aria-label="Loading">
+  <div class="l-tag">Dr. Chandraman S. Patil — Portfolio · <span id="l-date">Jul 14, 2026</span></div>
+  <div class="l-line" id="l-line">Engineering tomorrow with light.</div>
+  <div class="l-bar"><i id="l-fill"></i></div>
+  <div class="l-num"><span id="l-num">00</span> / 100</div>
+</div>
+
+<!-- ======================= NAVIGATION ======================= -->
+<header id="nav">
+  <div class="n-right">
+    <span id="clock" aria-hidden="true">00:00:00</span>
+    <button id="menu-btn" aria-expanded="false" aria-controls="menu">Menu <span class="mi" aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<nav id="menu" aria-label="Main menu">
+  <div class="m-grid">
+    <div class="m-links">
+      <a href="#identity" data-scroll><sup>01</sup>Identity</a>
+      <a href="#journey" data-scroll><sup>02</sup>Journey</a>
+      <a href="#research" data-scroll><sup>03</sup>Research</a>
+      <a href="#work" data-scroll><sup>04</sup>Flagship&nbsp;Work</a>
+      <a href="#recognition" data-scroll><sup>05</sup>Recognition</a>
+      <a href="#contact" data-scroll><sup>06</sup>Contact</a>
+    </div>
+    <div class="m-side">
+      <span class="m-cap">Elsewhere</span>
+      <a href="https://www.linkedin.com/in/chandramanpatil" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+      <a href="https://twitter.com/chandramanpatil" target="_blank" rel="noopener">X / Twitter ↗</a>
+      <a href="mailto:chandraman.patil@gmail.com">chandraman.patil@gmail.com</a>
+      <span class="m-cap" style="margin-top:14px">Cary, NC — USA</span>
+    </div>
+  </div>
+</nav>
+
+<nav id="dots" aria-label="Section index">
+  <a href="#hero" data-scroll data-dot="hero"><i></i><span>Opening</span></a>
+  <a href="#identity" data-scroll data-dot="identity"><i></i><span>Identity</span></a>
+  <a href="#journey" data-scroll data-dot="journey"><i></i><span>Journey</span></a>
+  <a href="#research" data-scroll data-dot="research"><i></i><span>Research</span></a>
+  <a href="#systems" data-scroll data-dot="systems"><i></i><span>Systems</span></a>
+  <a href="#work" data-scroll data-dot="work"><i></i><span>Work</span></a>
+  <a href="#numbers" data-scroll data-dot="numbers"><i></i><span>Measures</span></a>
+  <a href="#philosophy" data-scroll data-dot="philosophy"><i></i><span>Philosophy</span></a>
+  <a href="#recognition" data-scroll data-dot="recognition"><i></i><span>Recognition</span></a>
+  <a href="#vision" data-scroll data-dot="vision"><i></i><span>Trajectory</span></a>
+  <a href="#contact" data-scroll data-dot="contact"><i></i><span>Contact</span></a>
+</nav>
+
+<main>
+
+<!-- ======================= 01 · HERO ======================== -->
+<section id="hero" aria-label="Introduction">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-stage">
+    <div class="name-stack">
+      <span class="hero-dr serif" id="hero-dr">Dr.</span>
+      <h1 style="display:contents">
+        <span class="name-line nl-back mask" id="nl-back" aria-label="Chandraman">CHANDRAMAN</span>
+        <span class="portrait-wrap" id="portrait">
+          <img src="assets/hero-front.webp" alt="Portrait of Dr. Chandraman S. Patil" fetchpriority="high">
+        </span>
+        <span class="name-line nl-front mask" id="nl-front" aria-label="Patil">PATIL</span>
+      </h1>
+    </div>
+  </div>
+
+  <div class="hero-meta hm-tl" id="hm-tl">
+    Ph.D. in Computer Engineering<br>
+    MS in Computer Engineering<br>
+    <span class="em-c">George Washington University, Washington DC</span>
+  </div>
+  <div class="hero-meta hm-tr" id="hm-tr">
+    Nanophotonics<br>Photonics AI<br>Optical Systems<br>Autonomous Robotics
+  </div>
+  <div class="hero-meta hm-bl" id="hm-bl">
+    <span class="scroll-cue" aria-hidden="true"><i></i></span>
+    <span>Scroll<br>to explore</span>
+  </div>
+  <div class="hero-meta hm-br" id="hm-br">
+    Currently<br>
+    <span class="em-c">Lead Robotics Research Engineer</span><br>
+    HUMRO — Cary, NC
+  </div>
+
+  <div class="ticker" id="ticker" aria-hidden="true">
+    <div class="t-track">
+      <span>Scientist<b>&nbsp;&#10022;</b></span><span>Engineer<b>&nbsp;&#10022;</b></span><span>Inventor<b>&nbsp;&#10022;</b></span><span>Researcher<b>&nbsp;&#10022;</b></span><span>Builder<b>&nbsp;&#10022;</b></span><span>Speaker<b>&nbsp;&#10022;</b></span>
+      <span>Scientist<b>&nbsp;&#10022;</b></span><span>Engineer<b>&nbsp;&#10022;</b></span><span>Inventor<b>&nbsp;&#10022;</b></span><span>Researcher<b>&nbsp;&#10022;</b></span><span>Builder<b>&nbsp;&#10022;</b></span><span>Speaker<b>&nbsp;&#10022;</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 02 · IDENTITY ===================== -->
+<section id="identity" class="sec" aria-label="Identity">
+  <div class="label" data-reveal><span class="tick-dot"></span>01 — Identity</div>
+  <h2 class="h-ed" data-reveal>A scientist <em class="serif gl">who builds</em> —<br>from the atom to the warehouse floor.</h2>
+
+  <div class="id-grid">
+    <div>
+      <div class="id-words-wrap">
+        <img class="id-portrait" src="assets/hero-left.webp" alt="Dr. Chandraman S. Patil" loading="lazy">
+        <div class="id-words" aria-hidden="true">
+          <span class="hollow">Scientist.</span>
+          <span class="hollow">Engineer.</span>
+          <span class="hollow em-fill">Inventor.</span>
+          <span class="hollow">Builder.</span>
+        </div>
+      </div>
+      <div class="collab" data-reveal>
+        <b>Research across</b> — GWU · University of Florida · NIST · Naval Research Lab · UCLA · UT Austin · UPenn · imec/Ghent
+      </div>
+    </div>
+    <div>
+      <div class="id-copy">
+        <p data-reveal>I design, nano-fabricate, and test <strong>photonic and optoelectronic devices</strong> — the light-speed hardware beneath next-generation computing, communication, and sensing.</p>
+        <p data-reveal>My doctoral work at George Washington University helped establish <strong>strainoptronics</strong> — bending 2D crystals to control how they see light — published in <strong>Nature Photonics</strong> and now cited more than 360 times. Along the way I invented an automated <strong>2D Material Transfer System</strong> that Applied Physics Reviews named a Featured Article of the Year.</p>
+        <p data-reveal>Today I take the same rigor from the cleanroom to the concrete: leading the deployment of <strong>autonomous mobile robot fleets</strong> in live warehouses — customers, infrastructure, research, end to end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== 03 · JOURNEY ====================== -->
+<section id="journey" aria-label="Journey timeline">
+  <div class="j-head">
+    <div class="label" data-reveal><span class="tick-dot"></span>02 — The Journey</div>
+    <h2 class="h-ed" data-reveal>Thirteen years,<br>one <em class="serif gl">continuous experiment.</em></h2>
+  </div>
+  <div class="j-pin">
+  <div class="j-wrap">
+    <div class="j-track" id="j-track">
+      <article class="j-panel">
+        <div class="j-year">2013</div>
+        <div class="j-tag">Mumbai, India</div>
+        <h3>Where curiosity became circuits</h3>
+        <p>B.E. Electronics Engineering, University of Mumbai — Vidyalankar Institute of Technology. Embedded systems and integrated circuits light the first spark.</p>
+      </article>
+      <article class="j-panel">
+        <div class="j-year">2017</div>
+        <div class="j-tag">Washington, D.C.</div>
+        <h3>Into the nanoscale</h3>
+        <p>M.S. Computer Engineering at The George Washington University — VLSI, MEMS, and a first encounter with photonics that changes everything.</p>
+      </article>
+      <article class="j-panel">
+        <div class="j-year">2019</div>
+        <div class="j-tag">Doctoral research</div>
+        <h3>Ph.D. — Photonics</h3>
+        <p>Doctor of Philosophy in Computer Engineering at GWU. Designing, fabricating, and testing nanophotonic devices at &gt;100 GHz test benches.</p>
+      </article>
+      <article class="j-panel j-hi">
+        <div class="j-year">2020</div>
+        <div class="j-tag">Nature Photonics</div>
+        <h3>Strainoptronics is born</h3>
+        <p>Strain-engineered MoTe&#8322; photodetector for silicon photonic circuits. Journal Cover Page Award · 360+ citations · covered by Science Daily and Phys.org.</p>
+      </article>
+      <article class="j-panel j-hi">
+        <div class="j-year">2022</div>
+        <div class="j-tag">Applied Physics Reviews</div>
+        <h3>Machines that build with atoms</h3>
+        <p>The 2D Material Transfer System — Featured Article of the Year. US patent received for manufacturing strained-2D photonic devices.</p>
+      </article>
+      <article class="j-panel">
+        <div class="j-year">2023</div>
+        <div class="j-tag">University of Florida</div>
+        <h3>Research Assistant Professor</h3>
+        <p>Research faculty at Dept. of Electrical &amp; Computer Engineering, University of Florida, Gainesville — Photonic AI accelerators, Modulators, and Optical Logic Gates.</p>
+      </article>
+      <article class="j-panel j-hi">
+        <div class="j-year">2024</div>
+        <div class="j-tag">HUMRO — Cary, NC</div>
+        <h3>From cleanroom to Concrete</h3>
+        <p>Lead Robotics Research Engineer. End-to-end deployment and scaling of autonomous mobile robot fleet solutions and research in production warehouses.</p>
+      </article>
+      <article class="j-panel">
+        <div class="j-year">&rarr;</div>
+        <div class="j-tag">Next</div>
+        <h3>Light-speed intelligence</h3>
+        <p>Photonic computing meets embodied machines — hardware that thinks in photons and acts in the physical world.</p>
+      </article>
+    </div>
+  </div>
+  <div class="j-progress" aria-hidden="true"><i id="j-fill"></i></div>
+  </div>
+</section>
+
+<!-- ====================== 04 · RESEARCH ===================== -->
+<section id="research" class="sec" aria-label="Selected research">
+  <div class="label" data-reveal><span class="tick-dot"></span>03 — Selected Research</div>
+  <h2 class="h-ed" data-reveal>Publications,<br>hung like <em class="serif gl">exhibition pieces.</em></h2>
+  <p class="r-note" data-reveal>1,019 citations · h-index 14 · <a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar, July 2026 ↗</a></p>
+
+  <div class="r-list">
+    <a class="rrow" href="https://www.nature.com/articles/s41566-020-0647-4" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">01</span>
+      <span class="r-main">
+        <h3>Strain-engineered high-responsivity MoTe&#8322; photodetector for silicon photonic integrated circuits</h3>
+        <span class="r-sub">Bending a 2D crystal changes how it sees light — a foundation of strainoptronics, and a new class of detector for silicon photonics.</span>
+        <span class="r-badges"><em class="aw">&#10022; Journal cover</em><em>Science Daily</em><em>Phys.org</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">360</span>citations<br>Nature Photonics · 2020</span>
+    </a>
+    <a class="rrow" href="https://aip.scitation.org/doi/abs/10.1063/5.0071799" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">02</span>
+      <span class="r-main">
+        <h3>Highly accurate, reliable, and non-contaminating two-dimensional material transfer system</h3>
+        <span class="r-sub">2DMTS — an automated, AI-assisted robotic platform that places atomically thin flakes with cleanroom precision.</span>
+        <span class="r-badges"><em class="aw">&#10022; Featured Article of the Year</em><em>Invention</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">47</span>citations<br>Appl. Physics Reviews · 2022</span>
+    </a>
+    <a class="rrow" href="https://www.degruyter.com/document/doi/10.1515/nanoph-2021-0797/html" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">03</span>
+      <span class="r-main">
+        <h3>Integrated ultra-high-performance graphene optical modulator</h3>
+        <span class="r-sub">Graphene on photonics: electro-optic modulation engineered for speed and efficiency at telecom wavelengths.</span>
+        <span class="r-badges"><em>2D materials</em><em>Telecom</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">70</span>citations<br>Nanophotonics · 2022</span>
+    </a>
+    <a class="rrow" href="https://opg.optica.org/prj/fulltext.cfm?uri=prj-10-7-A97" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">04</span>
+      <span class="r-main">
+        <h3>Self-driven highly responsive PN junction InSe heterostructure near-infrared light detector</h3>
+        <span class="r-sub">A van der Waals junction that detects near-infrared light with zero external power — sensing at ultralow energy.</span>
+        <span class="r-badges"><em>Self-powered</em><em>NIR sensing</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">57</span>citations<br>Photonics Research · 2022</span>
+    </a>
+    <a class="rrow" href="https://www.nature.com/articles/s42005-024-01571-3" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">05</span>
+      <span class="r-main">
+        <h3>Multiplexed orbital angular momentum beams demultiplexing using hybrid optical-electronic convolutional neural network</h3>
+        <span class="r-sub">Untwisting structured light through turbulence with a hybrid optical-electronic neural network — photonics doing AI's work.</span>
+        <span class="r-badges"><em>Photonic AI</em><em>Free-space optics</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">47</span>citations<br>Communications Physics · 2024</span>
+    </a>
+    <a class="rrow" href="https://pubs.acs.org/doi/abs/10.1021/acsaelm.1c00281" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">06</span>
+      <span class="r-main">
+        <h3>Strain-induced spatially resolved charge transport in 2H-MoTe&#8322;</h3>
+        <span class="r-sub">Mapping how mechanical strain steers electrons through a 2D semiconductor, at the nanoscale.</span>
+        <span class="r-badges"><em class="aw">&#10022; Journal cover</em><em>Nanoscale transport</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">28</span>citations<br>ACS Appl. Electron. Mater. · 2021</span>
+    </a>
+  </div>
+  <div class="r-all" data-reveal>
+    <a class="btn" href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">All 73 publications <span class="arr">&#8599;</span></a>
+  </div>
+</section>
+
+<!-- ====================== 05 · SYSTEMS ====================== -->
+<section id="systems" class="sec" aria-label="Systems of expertise">
+  <div class="label" data-reveal><span class="tick-dot"></span>04 — Systems of Expertise</div>
+  <h2 class="h-ed" data-reveal>Four disciplines,<br><em class="serif gl">one instrument.</em></h2>
+
+  <div class="t-grid" data-reveal>
+    <div class="t-card">
+      <div class="t-viz" aria-hidden="true">
+        <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet">
+          <path class="wave-path"    d="M0,75 C40,35 80,115 120,75 C160,35 200,115 240,75 C280,35 320,115 360,75 L400,75"/>
+          <path class="wave-path w2" d="M0,95 C50,55 100,135 150,95 C200,55 250,135 300,95 C350,55 400,135 400,95"/>
+          <path class="wave-path w3" d="M0,55 C45,15 90,95 135,55 C180,15 225,95 270,55 C315,15 360,95 400,55"/>
+          <circle class="ring-res" cx="330" cy="42" r="20"/>
+          <circle cx="4" cy="75" r="3" fill="#35f2a4"/><circle cx="396" cy="75" r="3" fill="#35f2a4"/>
+        </svg>
+      </div>
+      <h3>Photonic Integrated Circuits</h3>
+      <p>Design, nano-fabrication, and characterization of on-chip optical devices — modulators, detectors, resonators — measured on ultra-high-bandwidth benches beyond 100&nbsp;GHz.</p>
+      <div class="t-tags">Si &amp; SiN platforms · electro-optics · ring resonators · &gt;100 GHz metrology</div>
+    </div>
+
+    <div class="t-card">
+      <div class="t-viz" aria-hidden="true">
+        <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet">
+          <defs><polygon id="hx" points="12.1,7 0,14 -12.1,7 -12.1,-7 0,-14 12.1,-7"/></defs>
+          <g class="strain-group">
+            <use class="hex" href="#hx" x="90"  y="45" style="animation-delay:0s"/>
+            <use class="hex h-em" href="#hx" x="114" y="59" style="animation-delay:.4s"/>
+            <use class="hex" href="#hx" x="138" y="45" style="animation-delay:.8s"/>
+            <use class="hex" href="#hx" x="162" y="59" style="animation-delay:1.2s"/>
+            <use class="hex h-em" href="#hx" x="186" y="45" style="animation-delay:1.6s"/>
+            <use class="hex" href="#hx" x="210" y="59" style="animation-delay:2s"/>
+            <use class="hex" href="#hx" x="234" y="45" style="animation-delay:2.4s"/>
+            <use class="hex h-em" href="#hx" x="258" y="59" style="animation-delay:2.8s"/>
+            <use class="hex" href="#hx" x="282" y="45" style="animation-delay:3.2s"/>
+            <use class="hex" href="#hx" x="102" y="87" style="animation-delay:.6s"/>
+            <use class="hex" href="#hx" x="126" y="101" style="animation-delay:1s"/>
+            <use class="hex h-em" href="#hx" x="150" y="87" style="animation-delay:1.4s"/>
+            <use class="hex" href="#hx" x="174" y="101" style="animation-delay:1.8s"/>
+            <use class="hex" href="#hx" x="198" y="87" style="animation-delay:2.2s"/>
+            <use class="hex" href="#hx" x="222" y="101" style="animation-delay:2.6s"/>
+            <use class="hex h-em" href="#hx" x="246" y="87" style="animation-delay:3s"/>
+            <use class="hex" href="#hx" x="270" y="101" style="animation-delay:3.4s"/>
+          </g>
+          <path d="M40,74 L74,74 M310,74 L360,74" stroke="#35f2a4" stroke-width="1.4" opacity=".7"/>
+          <path d="M46,66 L40,74 L46,82 M354,66 L360,74 L354,82" fill="none" stroke="#35f2a4" stroke-width="1.4" opacity=".7"/>
+        </svg>
+      </div>
+      <h3>2D Materials &amp; Strainoptronics</h3>
+      <p>Atomically thin semiconductors — MoTe&#8322;, InSe, graphene, MXenes — integrated onto photonics, with mechanical strain as a design dial for how they absorb and emit light.</p>
+      <div class="t-tags">TMDCs · MXenes · ITO / TCOs · hybrid integration · strain engineering</div>
+    </div>
+
+    <div class="t-card">
+      <div class="t-viz" aria-hidden="true">
+        <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet">
+          <line class="link-line hot" x1="60" y1="35"  x2="200" y2="30"/>
+          <line class="link-line" x1="60" y1="35"  x2="200" y2="75"/>
+          <line class="link-line" x1="60" y1="75"  x2="200" y2="30"/>
+          <line class="link-line hot" x1="60" y1="75"  x2="200" y2="120"/>
+          <line class="link-line" x1="60" y1="115" x2="200" y2="75"/>
+          <line class="link-line hot" x1="60" y1="115" x2="200" y2="120"/>
+          <line class="link-line hot" x1="200" y1="30"  x2="340" y2="55"/>
+          <line class="link-line" x1="200" y1="75"  x2="340" y2="55"/>
+          <line class="link-line" x1="200" y1="75"  x2="340" y2="95"/>
+          <line class="link-line hot" x1="200" y1="120" x2="340" y2="95"/>
+          <circle class="node" cx="60" cy="35" r="4" style="animation-delay:0s"/>
+          <circle class="node" cx="60" cy="75" r="4" style="animation-delay:.5s"/>
+          <circle class="node" cx="60" cy="115" r="4" style="animation-delay:1s"/>
+          <circle class="node n-em" cx="200" cy="30" r="5" style="animation-delay:.3s"/>
+          <circle class="node n-em" cx="200" cy="75" r="5" style="animation-delay:.9s"/>
+          <circle class="node n-em" cx="200" cy="120" r="5" style="animation-delay:1.5s"/>
+          <circle class="node" cx="340" cy="55" r="4" style="animation-delay:.7s"/>
+          <circle class="node" cx="340" cy="95" r="4" style="animation-delay:1.2s"/>
+        </svg>
+      </div>
+      <h3>Photonic AI &amp; Accelerators</h3>
+      <p>Neural networks that run on light — optical logic gates, femtojoule-per-bit modulators, and hybrid optical-electronic processors for computing at photon speed.</p>
+      <div class="t-tags">Optical logic · 1 fJ/bit modulation · OAM neural nets · tensor cores</div>
+    </div>
+
+    <div class="t-card">
+      <div class="t-viz" aria-hidden="true">
+        <svg viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet">
+          <g class="bot-grid">
+            <line x1="40" y1="20" x2="40" y2="130"/><line x1="120" y1="20" x2="120" y2="130"/>
+            <line x1="200" y1="20" x2="200" y2="130"/><line x1="280" y1="20" x2="280" y2="130"/>
+            <line x1="360" y1="20" x2="360" y2="130"/>
+            <line x1="40" y1="20" x2="360" y2="20"/><line x1="40" y1="75" x2="360" y2="75"/>
+            <line x1="40" y1="130" x2="360" y2="130"/>
+          </g>
+          <path class="bot-path ghost" d="M40,130 L120,130 L120,75 L280,75 L280,20 L360,20"/>
+          <path class="bot-path"       d="M40,130 L120,130 L120,75 L280,75 L280,20 L360,20"/>
+          <rect x="34" y="124" width="12" height="12" fill="none" stroke="#35f2a4" stroke-width="1.4"/>
+          <rect x="354" y="14" width="12" height="12" fill="#35f2a4" opacity=".9"/>
+        </svg>
+      </div>
+      <h3>Autonomous Robotics</h3>
+      <p>AMR, AGV, and UGV systems taken from applied research to production — fleet behavior, warehouse infrastructure integration, and the customer engagements that make them stick.</p>
+      <div class="t-tags">AMR fleets · warehouse automation · deployment at scale · applied research</div>
+    </div>
+  </div>
+
+  <div class="stack-strip" data-reveal aria-label="Capabilities">
+    <div class="s-track">
+      <span>MoTe&#8322;<b>&#10022;</b></span><span>InSe<b>&#10022;</b></span><span>Graphene<b>&#10022;</b></span><span>MXenes<b>&#10022;</b></span><span>Transparent Conductive Oxides / Indium Tin Oxides<b>&#10022;</b></span><span>Si &amp; SiN Photonics<b>&#10022;</b></span><span>Cleanroom Nanofab<b>&#10022;</b></span><span>Giga Hertz Test Benches<b>&#10022;</b></span><span>Electro-Optic Metrology<b>&#10022;</b></span><span>AMR<b>&#10022;</b></span><span>AGV<b>&#10022;</b></span><span>UGV<b>&#10022;</b></span><span>Fleet Management Software<b>&#10022;</b></span><span>Lab-to-Market Prototypes<b>&#10022;</b></span><span>Optical System Design and Testing<b>&#10022;</b></span>
+      <span>MoTe&#8322;<b>&#10022;</b></span><span>InSe<b>&#10022;</b></span><span>Graphene<b>&#10022;</b></span><span>MXenes<b>&#10022;</b></span><span>Transparent Conductive Oxides / Indium Tin Oxides<b>&#10022;</b></span><span>Si &amp; SiN Photonics<b>&#10022;</b></span><span>Cleanroom Nanofab<b>&#10022;</b></span><span>Giga Hertz Test Benches<b>&#10022;</b></span><span>Electro-Optic Metrology<b>&#10022;</b></span><span>AMR<b>&#10022;</b></span><span>AGV<b>&#10022;</b></span><span>UGV<b>&#10022;</b></span><span>Fleet Management Software<b>&#10022;</b></span><span>Lab-to-Market Prototypes<b>&#10022;</b></span><span>Optical System Design and Testing<b>&#10022;</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 06 · FLAGSHIP WORK ================== -->
+<section id="work" class="sec" aria-label="Flagship work">
+  <div class="label" data-reveal><span class="tick-dot"></span>05 — Flagship Work</div>
+  <h2 class="h-ed" data-reveal>Four chapters<br>of <em class="serif gl">applied physics.</em></h2>
+
+  <article class="project" data-reveal>
+    <div>
+      <div class="p-kicker">Chapter I — Invention</div>
+      <h3>Machines that build <em class="serif">with atoms.</em></h3>
+      <p class="p-desc">The 2D Material Transfer System (2DMTS): an automated, AI-assisted robotic platform that lifts and places atomically thin flakes — accurately, repeatably, without contamination — turning a dark art of nanofabrication into a process.</p>
+      <ul class="p-metrics">
+        <li><b>Recognition</b><span class="em-c">Featured Article of the Year — Appl. Physics Reviews</span></li>
+        <li><b>Role</b><span>Inventor · lead author</span></li>
+        <li><b>Reach</b><span>47 citations · adopted lab-wide</span></li>
+        <li><b>Stack</b><span>Robotics · machine vision · cleanroom process</span></li>
+      </ul>
+    </div>
+    <div class="p-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid meet">
+        <line x1="60" y1="300" x2="340" y2="300" stroke="rgba(238,240,234,.3)" stroke-width="1.4"/>
+        <rect x="150" y="288" width="100" height="12" fill="none" stroke="rgba(238,240,234,.35)"/>
+        <g class="flake"    ><rect x="164" y="258" width="72" height="10" fill="none" stroke="#35f2a4" transform="skewX(-18)" transform-origin="200 263"/></g>
+        <g class="flake f2"><rect x="170" y="236" width="60" height="10" fill="none" stroke="rgba(238,240,234,.6)" transform="skewX(-18)" transform-origin="200 241"/></g>
+        <g class="flake f3"><rect x="176" y="214" width="48" height="10" fill="none" stroke="#35f2a4" transform="skewX(-18)" transform-origin="200 219"/></g>
+        <g class="flake f4"><rect x="182" y="192" width="36" height="10" fill="none" stroke="rgba(238,240,234,.6)" transform="skewX(-18)" transform-origin="200 197"/></g>
+        <line x1="200" y1="40" x2="200" y2="150" stroke="rgba(53,242,164,.55)" stroke-width="1.2" stroke-dasharray="3 6"/>
+        <line x1="120" y1="40" x2="280" y2="40" stroke="rgba(238,240,234,.35)" stroke-width="1.4"/>
+        <circle cx="200" cy="150" r="5" fill="none" stroke="#35f2a4" stroke-width="1.4"/>
+        <line x1="188" y1="150" x2="212" y2="150" stroke="#35f2a4" stroke-width="1"/>
+        <line x1="200" y1="138" x2="200" y2="162" stroke="#35f2a4" stroke-width="1"/>
+      </svg>
+      <span class="pv-cap">2DMTS — automated transfer sequence</span>
+    </div>
+  </article>
+
+  <article class="project rev" data-reveal>
+    <div>
+      <div class="p-kicker">Chapter II — Discovery</div>
+      <h3>Bending crystals <em class="serif">to catch light.</em></h3>
+      <p class="p-desc">Strainoptronics: stretch a 2D semiconductor and its band structure moves — so a MoTe&#8322; flake draped over a silicon waveguide becomes a high-responsivity photodetector at telecom wavelengths. Published in Nature Photonics; protected by a US patent family.</p>
+      <ul class="p-metrics">
+        <li><b>Venue</b><span class="em-c">Nature Photonics · journal cover · 2020</span></li>
+        <li><b>Impact</b><span>360+ citations</span></li>
+        <li><b>Patent</b><span>US 2022/0373751 A1 — strained 2D photonic device</span></li>
+        <li><b>Press</b><span>Science Daily · Phys.org · GW Today</span></li>
+      </ul>
+    </div>
+    <div class="p-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid meet">
+        <rect x="30" y="180" width="340" height="26" fill="none" stroke="rgba(238,240,234,.35)"/>
+        <path id="wgpath" d="M34,193 L366,193" fill="none" stroke="transparent"/>
+        <g class="strain-group">
+          <path d="M120,180 Q200,116 280,180" fill="none" stroke="#35f2a4" stroke-width="1.6"/>
+          <path d="M132,180 Q200,128 268,180" fill="none" stroke="rgba(53,242,164,.4)" stroke-width="1"/>
+          <path d="M146,180 Q200,140 254,180" fill="none" stroke="rgba(53,242,164,.25)" stroke-width="1"/>
+        </g>
+        <circle r="4" fill="#35f2a4"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#wgpath"/></animateMotion></circle>
+        <circle r="3" fill="rgba(238,240,234,.8)"><animateMotion dur="3.2s" begin="1.4s" repeatCount="indefinite"><mpath href="#wgpath"/></animateMotion></circle>
+        <line x1="88" y1="150" x2="60" y2="150" stroke="rgba(238,240,234,.5)" stroke-width="1.2"/>
+        <line x1="312" y1="150" x2="340" y2="150" stroke="rgba(238,240,234,.5)" stroke-width="1.2"/>
+        <path d="M66,144 L60,150 L66,156 M334,144 L340,150 L334,156" fill="none" stroke="rgba(238,240,234,.5)" stroke-width="1.2"/>
+        <text x="200" y="262" text-anchor="middle" fill="rgba(238,240,234,.4)" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="4">STRAIN &#8594; &#916;E&#609; &#8594; PHOTOCURRENT</text>
+      </svg>
+      <span class="pv-cap">MoTe&#8322; under strain on a Si waveguide</span>
+    </div>
+  </article>
+
+  <article class="project" data-reveal>
+    <div>
+      <div class="p-kicker">Chapter III — Acceleration</div>
+      <h3>Computing at the <em class="serif">speed of light.</em></h3>
+      <p class="p-desc">Photonic AI hardware: coupling-based ITO modulators reaching toward 1 fJ/bit, reconfigurable optical logic gates, and hybrid optical-electronic neural networks that untangle structured light through atmospheric turbulence.</p>
+      <ul class="p-metrics">
+        <li><b>Patent</b><span class="em-c">Optical NN accelerator — US App. 19/273,647 · 2026</span></li>
+        <li><b>Efficiency</b><span>1 fJ/bit monolithic modulation</span></li>
+        <li><b>Result</b><span>OAM demultiplexing via hybrid CNN — Comms. Physics</span></li>
+        <li><b>Where</b><span>GWU → University of Florida ECE</span></li>
+      </ul>
+    </div>
+    <div class="p-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid meet">
+        <g class="bot-grid">
+          <line x1="70" y1="60" x2="70" y2="280"/><line x1="135" y1="60" x2="135" y2="280"/>
+          <line x1="200" y1="60" x2="200" y2="280"/><line x1="265" y1="60" x2="265" y2="280"/>
+          <line x1="330" y1="60" x2="330" y2="280"/>
+          <line x1="70" y1="60" x2="330" y2="60"/><line x1="70" y1="115" x2="330" y2="115"/>
+          <line x1="70" y1="170" x2="330" y2="170"/><line x1="70" y1="225" x2="330" y2="225"/>
+          <line x1="70" y1="280" x2="330" y2="280"/>
+        </g>
+        <line class="link-line hot" x1="70" y1="60" x2="330" y2="280"/>
+        <line class="link-line hot" x1="70" y1="170" x2="330" y2="115" style="animation-delay:1s"/>
+        <circle class="node n-em" cx="70" cy="60" r="4"/><circle class="node n-em" cx="135" cy="115" r="4" style="animation-delay:.4s"/>
+        <circle class="node n-em" cx="200" cy="170" r="4" style="animation-delay:.8s"/><circle class="node n-em" cx="265" cy="225" r="4" style="animation-delay:1.2s"/>
+        <circle class="node n-em" cx="330" cy="280" r="4" style="animation-delay:1.6s"/>
+        <text x="200" y="316" text-anchor="middle" fill="rgba(53,242,164,.7)" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="6">1 fJ / BIT</text>
+      </svg>
+      <span class="pv-cap">Photonic crossbar — optical logic mesh</span>
+    </div>
+  </article>
+</section>
+
+<!-- Chapter IV — full-bleed HUMRO -->
+<section class="p-bleed" id="humro" aria-label="Warehouse autonomy at HUMRO">
+  <div class="bg" aria-hidden="true"><img src="assets/pillars-bg.jpg" alt="" loading="lazy" id="humro-bg"></div>
+  <div class="p-inner">
+    <div data-reveal>
+      <div class="p-kicker">Chapter IV — Deployment · 2024 — present</div>
+      <h3>From cleanroom<br><em class="serif">to concrete.</em></h3>
+      <p class="p-desc">At HUMRO, the laboratory discipline goes to work: leading end-to-end deployment and scaling of autonomous mobile robot fleets in live warehouse environments — customer engagements, cross-functional teams, infrastructure integration, and the applied research that keeps the fleet getting smarter.</p>
+    </div>
+    <ul class="p-metrics" data-reveal>
+      <li><b>Role</b><span class="em-c">Lead Robotics Research Engineer</span></li>
+      <li><b>Scope</b><span>End-to-end: research → integration → scale</span></li>
+      <li><b>Systems</b><span>AMR · AGV · UGV fleets</span></li>
+      <li><b>Base</b><span>Cary, North Carolina</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====================== 07 · MEASURES ===================== -->
+<section id="numbers" class="sec" aria-label="Measures">
+  <div class="label" data-reveal><span class="tick-dot"></span>06 — Measures</div>
+  <h2 class="h-ed" data-reveal>The record,<br><em class="serif gl">in numbers.</em></h2>
+
+  <div class="num-grid" data-reveal>
+    <div class="num"><div class="n-val"><span data-count="1019" data-comma="1">0</span><i>+</i></div><div class="n-lab">Citations<br>Google Scholar</div></div>
+    <div class="num"><div class="n-val"><span data-count="73">0</span></div><div class="n-lab">Publications<br>journals · conferences</div></div>
+    <div class="num"><div class="n-val"><span data-count="14">0</span></div><div class="n-lab">h-index</div></div>
+    <div class="num"><div class="n-val"><span data-count="23">0</span></div><div class="n-lab">i10-index</div></div>
+    <div class="num"><div class="n-val"><span data-count="2">0</span></div><div class="n-lab">Patent families<br>granted app · pending</div></div>
+  </div>
+  <div class="num-foot" data-reveal>
+    NCSA nanoMFG Fellow<i>&#10022;</i>MOC Best-Paper Award, Japan<i>&#10022;</i>3 journal cover / feature awards<i>&#10022;</i>Reviewer — Optica · Nanophotonics · EPJ Quantum Tech
+  </div>
+</section>
+
+<!-- ===================== 08 · PHILOSOPHY ==================== -->
+<section id="philosophy" aria-label="Philosophy">
+  <div class="ph-bg" aria-hidden="true"><img src="assets/closer-bg.jpg" alt="" loading="lazy" id="ph-bg-img"></div>
+  <div class="ph-inner">
+    <blockquote class="ph-quote" id="ph-quote">&ldquo;Imagination is more important than knowledge. Knowledge is limited. <span class="gl">Imagination encircles the world.</span>&rdquo;</blockquote>
+    <div class="ph-attrib" data-reveal>Albert Einstein — carried from Mumbai to Washington</div>
+    <div class="ph-own" data-reveal>Great engineering begins with <i>scientific curiosity</i> — and ends as something real in the world.</div>
+  </div>
+</section>
+
+<!-- ==================== 09 · RECOGNITION ==================== -->
+<section id="recognition" class="sec" aria-label="Recognition">
+  <div class="label" data-reveal><span class="tick-dot"></span>07 — Recognition</div>
+  <h2 class="h-ed" data-reveal>Awards, juries,<br>and <em class="serif gl">rolling credits.</em></h2>
+
+  <ul class="cred" data-reveal>
+    <li><span class="c-what">MOC Student Award — best paper</span><span class="c-who">26th Microoptics Conference · Japan</span><span class="c-when">2021</span></li>
+    <li><span class="c-what">NCSA nanoMFG Fellowship</span><span class="c-who">National Center for Supercomputing Applications</span><span class="c-when">2021</span></li>
+    <li><span class="c-what">Sprawcew Scholarship</span><span class="c-who">The George Washington University</span><span class="c-when">2021–22</span></li>
+    <li><span class="c-what">Journal cover</span><span class="c-who">Nature Photonics — strain-engineered MoTe&#8322; photodetector</span><span class="c-when">2020</span></li>
+    <li><span class="c-what">Journal cover</span><span class="c-who">ACS Applied Electronic Materials — strain-induced transport</span><span class="c-when">2021</span></li>
+    <li><span class="c-what">Featured Article of the Year</span><span class="c-who">Applied Physics Reviews — 2D Material Transfer System</span><span class="c-when">2022</span></li>
+    <li><span class="c-what">In the press</span><span class="c-who">Science Daily · Phys.org · GW Today</span><span class="c-when">2020</span></li>
+    <li><span class="c-what">Peer reviewer</span><span class="c-who">Optica · Nanophotonics · EPJ Quantum Technology</span><span class="c-when">Ongoing</span></li>
+    <li><span class="c-what">Review Editor</span><span class="c-who">Frontiers in Electronics — Flexible Electronics editorial board</span><span class="c-when">Ongoing</span></li>
+  </ul>
+</section>
+
+<!-- ===================== 10 · TRAJECTORY ==================== -->
+<section id="vision" class="sec" aria-label="Trajectory">
+  <div class="label" data-reveal><span class="tick-dot"></span>08 — Trajectory</div>
+  <h2 class="h-ed" data-reveal>Where the work<br>goes <em class="serif gl">next.</em></h2>
+
+  <div class="v-list" data-reveal>
+    <div class="v-row"><span class="v-arr">&#8599;</span><span class="v-name">Photonic AI</span><span class="v-sub">Accelerators that compute in photons — optical logic, tensor cores, fJ/bit links</span></div>
+    <div class="v-row"><span class="v-arr">&#8599;</span><span class="v-name">Mid-IR Photonics</span><span class="v-sub">Sensing deeper into the spectrum — chemistry, health, environment</span></div>
+    <div class="v-row"><span class="v-arr">&#8599;</span><span class="v-name">MXene Devices</span><span class="v-sub">Emerging 2D conductors for flexible, transparent optoelectronics</span></div>
+    <div class="v-row"><span class="v-arr">&#8599;</span><span class="v-name">Intelligent Mfg.</span><span class="v-sub">Lab-to-market automation — machines that fabricate at atomic precision</span></div>
+    <div class="v-row"><span class="v-arr">&#8599;</span><span class="v-name">Autonomy at Scale</span><span class="v-sub">Robot fleets as infrastructure — perception, coordination, deployment</span></div>
+  </div>
+</section>
+
+<!-- ====================== 11 · CONTACT ====================== -->
+<section id="contact" class="sec" aria-label="Contact">
+  <div class="label" style="justify-content:center" data-reveal><span class="tick-dot"></span>09 — Contact</div>
+  <h2 class="c-head" data-reveal>Let&rsquo;s build <em class="serif">the future</em><br>together.</h2>
+  <p class="c-sub" data-reveal>Research collaborations, robotics deployments, speaking, or a hard problem that needs both a scientist and an engineer — the door is open.</p>
+  <div data-reveal>
+    <a class="btn" href="mailto:chandraman.patil@gmail.com">chandraman.patil@gmail.com <span class="arr">&#8599;</span></a>
+  </div>
+  <div class="c-links" data-reveal>
+    <a href="https://www.linkedin.com/in/chandramanpatil" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://twitter.com/chandramanpatil" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://patentcenter.uspto.gov/applications/17771763" target="_blank" rel="noopener">Patents</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>&copy; MMXXVI — Dr. Chandraman S. Patil</span>
+  <span>Mumbai &rarr; Washington D.C. &rarr; Gainesville &rarr; Cary, NC</span>
+  <a href="#hero" data-scroll>Back to top &#8593;</a>
+</footer>
+
+<style>
+/* late-pass tuning: CSS-driven menu (works with or without GSAP) + journey pin sizing */
+#menu{ transition:transform .85s var(--ease), visibility 0s linear .85s; }
+body.menu-open #menu{ transform:translateY(0); visibility:visible; transition:transform .85s var(--ease), visibility 0s; }
+#journey .j-head{ padding:12vh var(--gutter) 0; }
+.j-wrap{ height:64vh; }
+.j-progress{ margin:2vh var(--gutter) 10vh; }
+@media (max-width:900px){ .j-wrap{ height:auto; padding:2vh 0 0; } }
+.portrait-wrap{ width:clamp(280px,30vw,470px); }
+.portrait-wrap img{ max-height:74vh; width:auto; margin:0 auto; }
+@media (max-width:900px){ .portrait-wrap img{ max-height:60vh; } }
+@media (max-width:540px){ #clock{ display:none; } }
+#loader{ transition:opacity .9s var(--ease), visibility 0s linear .9s; }
+body.loaded #loader{ opacity:0; visibility:hidden; pointer-events:none; }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+(function(){
+"use strict";
+
+/* ---------------------------------------------------------- */
+/* environment                                                  */
+/* ---------------------------------------------------------- */
+var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var FINE    = window.matchMedia("(pointer: fine)").matches;
+var HAS_GSAP = (typeof gsap !== "undefined") && (typeof ScrollTrigger !== "undefined");
+var MOTION  = HAS_GSAP && !REDUCED;
+
+if (HAS_GSAP) gsap.registerPlugin(ScrollTrigger);
+
+/* ---------------------------------------------------------- */
+/* utilities                                                    */
+/* ---------------------------------------------------------- */
+function $(s, c){ return (c || document).querySelector(s); }
+function $$(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
+
+function splitChars(el){
+  var text = el.textContent; el.textContent = "";
+  var frag = document.createDocumentFragment();
+  for (var i = 0; i < text.length; i++){
+    var s = document.createElement("span");
+    s.className = "char";
+    s.innerHTML = text[i] === " " ? "&nbsp;" : text[i];
+    frag.appendChild(s);
+  }
+  el.appendChild(frag);
+  return $$(".char", el);
+}
+
+function splitWords(el){
+  var out = [];
+  (function walk(node){
+    Array.prototype.slice.call(node.childNodes).forEach(function(n){
+      if (n.nodeType === 3){
+        var parts = n.textContent.split(/(\s+)/);
+        var frag = document.createDocumentFragment();
+        parts.forEach(function(p){
+          if (p === "") return;
+          if (/^\s+$/.test(p)){ frag.appendChild(document.createTextNode(p)); }
+          else {
+            var s = document.createElement("span");
+            s.className = "word"; s.textContent = p;
+            out.push(s); frag.appendChild(s);
+          }
+        });
+        n.parentNode.replaceChild(frag, n);
+      } else if (n.nodeType === 1){ walk(n); }
+    });
+  })(el);
+  return out;
+}
+
+/* ---------------------------------------------------------- */
+/* date + clock                                                 */
+/* ---------------------------------------------------------- */
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtDate(d){ return MONTHS[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear(); }
+(function(){ var ld = $("#l-date"); if (ld) ld.textContent = fmtDate(new Date()); })();
+
+(function clock(){
+  var el = $("#clock"); if (!el) return;
+  function tick(){
+    var d = new Date();
+    el.textContent = fmtDate(d) + " · " + ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2) + ":" + ("0"+d.getSeconds()).slice(-2);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ---------------------------------------------------------- */
+/* smooth scroll (Lenis)                                        */
+/* ---------------------------------------------------------- */
+var lenis = null;
+if (MOTION && typeof Lenis !== "undefined"){
+  lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+  lenis.on("scroll", ScrollTrigger.update);
+  gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+  gsap.ticker.lagSmoothing(0);
+}
+
+function scrollToTarget(el){
+  if (lenis){ lenis.scrollTo(el, { duration: 1.5 }); }
+  else { el.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" }); }
+}
+
+/* ---------------------------------------------------------- */
+/* custom cursor — the lab light                                */
+/* ---------------------------------------------------------- */
+(function cursor(){
+  if (!FINE || REDUCED){ document.body.classList.remove("custom-cursor"); return; }
+  var dot = $("#cursor-dot"), ring = $("#cursor-ring"), glow = $("#cursor-glow");
+  var mx = innerWidth/2, my = innerHeight/2;
+  var dx = mx, dy = my, rx = mx, ry = my, gx = mx, gy = my;
+  var shown = false;
+
+  addEventListener("mousemove", function(e){
+    mx = e.clientX; my = e.clientY;
+    if (!shown){
+      shown = true;
+      [dot, ring, glow].forEach(function(n){ n.style.opacity = "1"; });
+    }
+  }, { passive: true });
+
+  function loop(){
+    dx += (mx-dx)*0.4;  dy += (my-dy)*0.4;
+    rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+    gx += (mx-gx)*0.09; gy += (my-gy)*0.09;
+    dot.style.transform  = "translate3d("+dx+"px,"+dy+"px,0)";
+    ring.style.transform = "translate3d("+rx+"px,"+ry+"px,0)";
+    glow.style.transform = "translate3d("+gx+"px,"+gy+"px,0)";
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  $$("a, button, .rrow, .v-row").forEach(function(t){
+    t.addEventListener("mouseenter", function(){ document.body.classList.add("cursor-hover"); });
+    t.addEventListener("mouseleave", function(){ document.body.classList.remove("cursor-hover"); });
+  });
+})();
+
+/* ---------------------------------------------------------- */
+/* menu (CSS-driven panel, GSAP garnish)                        */
+/* ---------------------------------------------------------- */
+(function menu(){
+  var btn = $("#menu-btn"), open = false;
+  btn.addEventListener("click", function(){
+    open = !open;
+    document.body.classList.toggle("menu-open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    if (lenis){ open ? lenis.stop() : lenis.start(); }
+    if (open && MOTION){
+      gsap.fromTo("#menu .m-links a", {y:46, opacity:0}, {y:0, opacity:1, stagger:.06, duration:.7, delay:.3, ease:"power3.out", overwrite:true});
+      gsap.fromTo("#menu .m-side > *", {y:18, opacity:0}, {y:0, opacity:1, stagger:.05, duration:.55, delay:.45, ease:"power3.out", overwrite:true});
+    }
+  });
+  window.__closeMenu = function(){
+    if (!open) return 0;
+    open = false;
+    document.body.classList.remove("menu-open");
+    btn.setAttribute("aria-expanded","false");
+    if (lenis) lenis.start();
+    return 650;
+  };
+})();
+
+/* anchor scrolling */
+$$("[data-scroll]").forEach(function(a){
+  a.addEventListener("click", function(e){
+    var id = a.getAttribute("href");
+    if (!id || id.charAt(0) !== "#") return;
+    var el = $(id); if (!el) return;
+    e.preventDefault();
+    var wait = window.__closeMenu ? window.__closeMenu() : 0;
+    setTimeout(function(){ scrollToTarget(el); }, wait);
+  });
+});
+
+/* ---------------------------------------------------------- */
+/* photonic interference field (hero canvas)                    */
+/* ---------------------------------------------------------- */
+(function field(){
+  var canvas = $("#field"); if (!canvas || REDUCED) return;
+  var ctx = canvas.getContext("2d");
+  var W, H, DPR, particles = [], running = true;
+  var mouse = { x: -9999, y: -9999 };
+
+  function resize(){
+    DPR = Math.min(devicePixelRatio || 1, 1.75);
+    W = canvas.offsetWidth;
+    H = canvas.offsetHeight;
+    canvas.width = W * DPR; canvas.height = H * DPR;
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    seed();
+  }
+  function seed(){
+    particles = [];
+    var n = Math.min(150, Math.max(60, Math.floor(W / 11)));
+    for (var i = 0; i < n; i++){
+      particles.push({
+        x: Math.random() * W,
+        base: H * (0.18 + Math.random() * 0.64),
+        amp: 8 + Math.random() * 26,
+        k: 0.004 + Math.random() * 0.008,
+        speed: 0.25 + Math.random() * 0.8,
+        phase: Math.random() * Math.PI * 2,
+        em: Math.random() < 0.22,
+        r: 0.7 + Math.random() * 1.3
+      });
+    }
+  }
+  addEventListener("resize", resize, { passive: true });
+  canvas.parentNode.addEventListener("mousemove", function(e){
+    var b = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - b.left; mouse.y = e.clientY - b.top;
+  }, { passive: true });
+
+  var t = 0;
+  function frame(){
+    requestAnimationFrame(frame);
+    if (!running || document.hidden) return;
+    t += 0.014;
+    ctx.fillStyle = "rgba(6,6,6,0.30)";
+    ctx.fillRect(0, 0, W, H);
+
+    /* faint interference guides */
+    ctx.lineWidth = 1;
+    for (var l = 0; l < 3; l++){
+      ctx.beginPath();
+      var by = H * (0.3 + l * 0.2);
+      for (var x = 0; x <= W; x += 16){
+        var y = by + Math.sin(x * 0.006 + t * (1 + l * 0.4)) * 18
+                   + Math.sin(x * 0.013 - t * 0.7) * 8;
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = "rgba(53,242,164," + (0.05 - l * 0.012) + ")";
+      ctx.stroke();
+    }
+
+    /* photons */
+    for (var i = 0; i < particles.length; i++){
+      var p = particles[i];
+      p.x += p.speed; if (p.x > W + 20){ p.x = -20; }
+      var mAmp = 0;
+      var dxm = p.x - mouse.x;
+      if (Math.abs(dxm) < 260){
+        var dym = p.base - mouse.y;
+        mAmp = 30 * Math.exp(-(dxm*dxm + dym*dym*0.6) / 26000);
+      }
+      var y = p.base + Math.sin(p.x * p.k + t * 1.6 + p.phase) * (p.amp + mAmp);
+      ctx.beginPath();
+      ctx.arc(p.x, y, p.r, 0, 6.2832);
+      ctx.fillStyle = p.em ? "rgba(53,242,164,.7)" : "rgba(238,240,234,.42)";
+      ctx.fill();
+    }
+  }
+  resize(); frame();
+
+  if (HAS_GSAP){
+    ScrollTrigger.create({
+      trigger: "#hero", start: "top top", end: "bottom top",
+      onLeave: function(){ running = false; },
+      onEnterBack: function(){ running = true; }
+    });
+  }
+})();
+
+/* ---------------------------------------------------------- */
+/* NO-MOTION FALLBACK — everything visible, loader dismissed    */
+/* ---------------------------------------------------------- */
+if (!MOTION){
+  $$("[data-count]").forEach(function(el){
+    var v = parseInt(el.getAttribute("data-count"), 10);
+    el.textContent = el.getAttribute("data-comma") ? v.toLocaleString("en-US") : v;
+  });
+  $$(".hollow").forEach(function(el){ el.classList.add("is-fill"); });
+  setTimeout(function(){
+    document.body.classList.add("loaded");
+    setTimeout(function(){ var l = $("#loader"); if (l) l.remove(); }, 1000);
+  }, REDUCED ? 200 : 900);
+  return; /* stop here — static, readable, honest */
+}
+
+/* ============================================================
+   FULL MOTION PATH
+   ============================================================ */
+gsap.defaults({ ease: "power3.out" });
+
+/* --- initial states --- */
+var backChars  = splitChars($("#nl-back"));
+var frontChars = splitChars($("#nl-front"));
+gsap.set(backChars,  { yPercent: 112 });
+gsap.set(frontChars, { yPercent: 112 });
+gsap.set("#portrait", { yPercent: 10, opacity: 0, scale: 1.06 });
+gsap.set("#hero-dr",  { opacity: 0, y: 14 });
+gsap.set(".hero-meta", { opacity: 0, y: 18 });
+gsap.set(".ticker",   { opacity: 0 });
+gsap.set(".hero-glow",{ opacity: 0, scale: 0.85 });
+
+var revealEls = $$("[data-reveal]");
+gsap.set(revealEls, { y: 46, opacity: 0 });
+
+/* --- preloader --- */
+(function loader(){
+  var line = $("#l-line"), fill = $("#l-fill"), num = $("#l-num");
+  var chars = splitChars(line);
+  gsap.set(chars, { y: 22, opacity: 0 });
+
+  var p = { v: 0 };
+  var loaded = false, minDone = false;
+  addEventListener("load", function(){ loaded = true; maybeFinish(); });
+  setTimeout(function(){ loaded = true; maybeFinish(); }, 3800); /* network safety valve */
+
+  var intro = gsap.timeline();
+  intro.to(chars, { y: 0, opacity: 1, duration: .8, stagger: .016, ease: "power2.out", delay: .15 })
+       .to(p, { v: 88, duration: 1.5, ease: "power1.inOut",
+                onUpdate: function(){
+                  fill.style.transform = "scaleX(" + (p.v/100) + ")";
+                  num.textContent = ("0" + Math.round(p.v)).slice(-2);
+                },
+                onComplete: function(){ minDone = true; maybeFinish(); } }, "-=.35");
+
+  function maybeFinish(){
+    if (!loaded || !minDone || maybeFinish.done) return;
+    maybeFinish.done = true;
+    gsap.timeline()
+      .to(p, { v: 100, duration: .45, ease: "power2.in",
+               onUpdate: function(){
+                 fill.style.transform = "scaleX(" + (p.v/100) + ")";
+                 num.textContent = Math.round(p.v) === 100 ? "100" : ("0"+Math.round(p.v)).slice(-2);
+               } })
+      .to("#loader > *", { opacity: 0, y: -18, duration: .5, stagger: .05 }, "+=.1")
+      .to("#loader", { yPercent: -100, duration: 1.05, ease: "expo.inOut",
+                       onComplete: function(){ $("#loader").remove(); ScrollTrigger.refresh(); } }, "-=.15")
+      .add(heroIntro, "-=.55");
+  }
+})();
+
+/* --- hero entrance --- */
+function heroIntro(){
+  gsap.timeline()
+    .to(".hero-glow", { opacity: 1, scale: 1, duration: 1.6, ease: "power2.out" }, 0)
+    .to(backChars,  { yPercent: 0, duration: 1.15, stagger: .035, ease: "expo.out" }, .05)
+    .to("#portrait", { yPercent: 0, opacity: 1, scale: 1, duration: 1.5, ease: "expo.out" }, .3)
+    .to(frontChars, { yPercent: 0, duration: 1.15, stagger: .045, ease: "expo.out" }, .45)
+    .to("#hero-dr", { opacity: 1, y: 0, duration: .8 }, .9)
+    .to(".hero-meta", { opacity: 1, y: 0, duration: .9, stagger: .08 }, 1.0)
+    .to(".ticker", { opacity: 1, duration: .8 }, 1.2);
+}
+
+/* --- hero: mouse depth + scroll dolly --- */
+(function heroMotion(){
+  if (FINE && innerWidth > 1024){
+    var qs = {
+      port:  gsap.quickTo("#portrait", "x", { duration: .9, ease: "power3" }),
+      back:  gsap.quickTo("#nl-back",  "x", { duration: 1.1, ease: "power3" }),
+      front: gsap.quickTo("#nl-front", "x", { duration: .7, ease: "power3" }),
+      glow:  gsap.quickTo(".hero-glow","x", { duration: 1.3, ease: "power3" }),
+      dr:    gsap.quickTo("#hero-dr",  "x", { duration: .8, ease: "power3" })
+    };
+    $("#hero").addEventListener("mousemove", function(e){
+      var n = (e.clientX / innerWidth) - 0.5;
+      qs.port(n * 26); qs.back(n * -14); qs.front(n * 38); qs.glow(n * 46); qs.dr(n * 30);
+    }, { passive: true });
+  }
+  gsap.timeline({ scrollTrigger: { trigger: "#hero", start: "top top", end: "bottom top", scrub: true } })
+    .to("#portrait", { yPercent: 16, scale: 1.08 }, 0)
+    .to("#nl-back",  { yPercent: -34, opacity: .3 }, 0)
+    .to("#nl-front", { yPercent: 30 }, 0)
+    .to(".hero-glow",{ opacity: .35 }, 0)
+    .to(".hero-meta",{ opacity: 0, y: -24 }, 0);
+})();
+
+/* --- generic reveals --- */
+ScrollTrigger.batch(revealEls, {
+  start: "top 88%",
+  onEnter: function(batch){
+    gsap.to(batch, { y: 0, opacity: 1, duration: 1.1, stagger: .09, ease: "power3.out", overwrite: true });
+  }
+});
+
+/* --- identity hollow words fill --- */
+ScrollTrigger.create({
+  trigger: ".id-words", start: "top 78%", once: true,
+  onEnter: function(){
+    $$(".id-words .hollow").forEach(function(el, i){
+      gsap.delayedCall(i * .18, function(){ el.classList.add("is-fill"); });
+    });
+  }
+});
+
+/* --- journey: horizontal documentary --- */
+(function journey(){
+  var track = $("#j-track"), fillBar = $("#j-fill");
+  if (innerWidth <= 900){ fillBar && (fillBar.style.transform = "scaleX(1)"); return; }
+  function dist(){ return Math.max(0, track.scrollWidth - innerWidth); }
+  gsap.to(track, {
+    x: function(){ return -dist(); },
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".j-pin", start: "top 12%",
+      end: function(){ return "+=" + (dist() + 300); },
+      pin: ".j-pin", scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
+      onUpdate: function(self){ fillBar.style.transform = "scaleX(" + self.progress + ")"; }
+    }
+  });
+})();
+
+/* --- counters --- */
+$$("[data-count]").forEach(function(el){
+  var end = parseInt(el.getAttribute("data-count"), 10);
+  var comma = !!el.getAttribute("data-comma");
+  var o = { v: 0 };
+  ScrollTrigger.create({
+    trigger: el, start: "top 86%", once: true,
+    onEnter: function(){
+      gsap.to(o, { v: end, duration: 2.1, ease: "power2.out",
+        onUpdate: function(){
+          var n = Math.round(o.v);
+          el.textContent = comma ? n.toLocaleString("en-US") : n;
+        } });
+    }
+  });
+});
+
+/* --- philosophy: word-by-word focus + slow dolly --- */
+(function philosophy(){
+  var q = $("#ph-quote");
+  var words = splitWords(q);
+  gsap.set(words, { opacity: .07, y: 12, filter: "blur(5px)" });
+  gsap.to(words, {
+    opacity: 1, y: 0, filter: "blur(0px)", stagger: .06, ease: "none",
+    scrollTrigger: { trigger: "#philosophy", start: "top 72%", end: "center 42%", scrub: true }
+  });
+  gsap.fromTo("#ph-bg-img", { yPercent: -9, scale: 1.12 }, {
+    yPercent: 7, scale: 1.02, ease: "none",
+    scrollTrigger: { trigger: "#philosophy", start: "top bottom", end: "bottom top", scrub: true }
+  });
+})();
+
+/* --- HUMRO chapter parallax --- */
+gsap.fromTo("#humro-bg", { yPercent: -10, scale: 1.1 }, {
+  yPercent: 8, scale: 1.02, ease: "none",
+  scrollTrigger: { trigger: "#humro", start: "top bottom", end: "bottom top", scrub: true }
+});
+
+/* --- progress bar + section dots --- */
+ScrollTrigger.create({
+  start: 0, end: "max",
+  onUpdate: function(self){ $("#progress").style.transform = "scaleX(" + self.progress + ")"; }
+});
+
+(function dots(){
+  var map = { humro: "work" };
+  var ids = ["hero","identity","journey","research","systems","work","humro","numbers","philosophy","recognition","vision","contact"];
+  function setDot(name){
+    $$("#dots a").forEach(function(a){ a.classList.toggle("active", a.getAttribute("data-dot") === name); });
+  }
+  ids.forEach(function(id){
+    var el = document.getElementById(id); if (!el) return;
+    ScrollTrigger.create({
+      trigger: el, start: "top center", end: "bottom center",
+      onToggle: function(self){ if (self.isActive) setDot(map[id] || id); }
+    });
+  });
+  setDot("hero");
+})();
+
+addEventListener("load", function(){ ScrollTrigger.refresh(); });
+
+})();
+</script>
+</body>
+</html>
