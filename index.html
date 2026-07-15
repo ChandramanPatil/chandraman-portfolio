@@ -307,7 +307,7 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 }
 .nl-front .fill{ color:var(--ink); -webkit-text-stroke:0; }
 .hero-dr{
-  position:absolute; z-index:4; left:8vw; top:-1.7em;
+  position:absolute; z-index:4; left:8vw; top:clamp(190px,24vh,320px);
   font-family:var(--f-s); font-style:italic; font-size:clamp(1.2rem,2.6vw,2.2rem);
   color:var(--em); text-shadow:0 0 30px rgba(53,242,164,.35);
 }
@@ -738,8 +738,8 @@ footer a:hover{ color:var(--em); }
   <div class="hero-glow" aria-hidden="true"></div>
 
   <div class="hero-stage">
+    <span class="hero-dr serif" id="hero-dr">Dr.</span>
     <div class="name-stack">
-      <span class="hero-dr serif" id="hero-dr">Dr.</span>
       <h1 style="display:contents">
         <span class="name-line nl-back mask" id="nl-back" aria-label="Chandraman">CHANDRAMAN</span>
         <span class="portrait-wrap" id="portrait">
