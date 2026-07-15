@@ -615,6 +615,49 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 #contact .c-head{ font-weight:280; font-stretch:104%; font-size:clamp(2.8rem,7.4vw,8rem); line-height:1.02; letter-spacing:-.022em; text-wrap:balance; }
 #contact .c-head .serif{ color:var(--em); text-shadow:0 0 60px rgba(53,242,164,.25); }
 #contact .c-sub{ margin:4.5vh auto 6vh; max-width:52ch; color:var(--ink-2); }
+
+.c-form-wrap{ position:relative; max-width:640px; margin:0 auto; min-height:340px; }
+#c-form{ display:flex; flex-direction:column; gap:22px; text-align:left; transition:opacity .5s var(--ease), transform .5s var(--ease); }
+#c-form.hide{ opacity:0; transform:translateY(-14px); pointer-events:none; position:absolute; inset:0; }
+.c-field{ position:relative; }
+.c-field label{
+  display:block; margin-bottom:10px; font-family:var(--f-m); font-size:10px;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--ink-3);
+}
+.c-field input, .c-field textarea{
+  width:100%; background:transparent; border:1px solid var(--line-2); border-radius:10px;
+  padding:16px 18px; color:var(--ink); font-family:var(--f-d); font-size:1.05rem; font-weight:360;
+  transition:border-color .4s var(--ease), background .4s var(--ease);
+}
+.c-field textarea{ resize:vertical; min-height:110px; line-height:1.5; }
+.c-field input::placeholder, .c-field textarea::placeholder{ color:var(--ink-3); }
+.c-field input:focus, .c-field textarea:focus{ outline:none; border-color:var(--em-dim); background:rgba(53,242,164,.03); }
+.c-field.err input, .c-field.err textarea{ border-color:rgba(255,110,110,.55); }
+.c-field .c-errmsg{ display:none; margin-top:8px; font-family:var(--f-m); font-size:10.5px; letter-spacing:.1em; color:#ff8a8a; }
+.c-field.err .c-errmsg{ display:block; }
+.c-hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+.c-row{ display:flex; gap:22px; flex-wrap:wrap; }
+.c-row .c-field{ flex:1 1 220px; }
+
+#c-submit{ align-self:center; margin-top:6px; border:1px solid var(--line-2); cursor:pointer; }
+#c-submit[disabled]{ opacity:.55; cursor:default; }
+#c-submit[disabled]::before{ display:none; }
+.c-status{ margin-top:16px; text-align:center; font-family:var(--f-m); font-size:11px; letter-spacing:.2em; color:#ff8a8a; min-height:1em; }
+
+.c-thanks{
+  position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;
+  opacity:0; transform:translateY(14px); pointer-events:none;
+  transition:opacity .7s var(--ease), transform .7s var(--ease);
+}
+.c-thanks.show{ opacity:1; transform:translateY(0); pointer-events:auto; }
+.c-thanks .c-check{
+  width:56px; height:56px; border-radius:50%; border:1px solid var(--em-dim);
+  display:flex; align-items:center; justify-content:center; box-shadow:0 0 40px rgba(53,242,164,.18);
+}
+.c-thanks .c-check svg{ width:22px; height:22px; stroke:var(--em); stroke-width:2; fill:none; }
+.c-thanks h3{ font-family:var(--f-s); font-style:italic; font-weight:400; font-size:clamp(1.6rem,3.6vw,2.4rem); color:var(--ink); }
+.c-thanks p{ color:var(--ink-2); max-width:40ch; text-align:center; }
+
 .c-links{ margin-top:7vh; display:flex; justify-content:center; gap:clamp(1.6rem,4vw,4rem); flex-wrap:wrap; font-family:var(--f-m); font-size:11px; letter-spacing:.3em; text-transform:uppercase; }
 .c-links a{ color:var(--ink-2); position:relative; padding-bottom:6px; }
 .c-links a::after{ content:""; position:absolute; left:0; bottom:0; height:1px; width:100%; background:var(--em); transform:scaleX(0); transform-origin:right; transition:transform .5s var(--ease); }
@@ -1230,8 +1273,41 @@ footer a:hover{ color:var(--em); }
   <div class="label" style="justify-content:center" data-reveal><span class="tick-dot"></span>09 — Contact</div>
   <h2 class="c-head" data-reveal>Let&rsquo;s build <em class="serif">the future</em><br>together.</h2>
   <p class="c-sub" data-reveal>Research collaborations, robotics deployments, speaking, or a hard problem that needs both a scientist and an engineer — the door is open.</p>
-  <div data-reveal>
-    <a class="btn" href="mailto:chandraman.patil@gmail.com">chandraman.patil@gmail.com <span class="arr">&#8599;</span></a>
+  <div class="c-form-wrap" data-reveal>
+    <form id="c-form" novalidate>
+      <div class="c-row">
+        <div class="c-field">
+          <label for="c-name">Name</label>
+          <input type="text" id="c-name" name="name" placeholder="Your name" autocomplete="name" required>
+          <span class="c-errmsg">Please enter your name.</span>
+        </div>
+        <div class="c-field">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <span class="c-errmsg">Please enter a valid email.</span>
+        </div>
+      </div>
+      <div class="c-field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" placeholder="What are you working on?" required></textarea>
+        <span class="c-errmsg">Please add a short message.</span>
+      </div>
+      <!-- honeypot — left empty by humans, catches simple bots -->
+      <div class="c-hp" aria-hidden="true">
+        <label for="c-hp">Leave this field empty</label>
+        <input type="text" id="c-hp" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+      <button class="btn" type="submit" id="c-submit">Send message <span class="arr">&#8599;</span></button>
+      <div class="c-status" id="c-status" role="status" aria-live="polite"></div>
+    </form>
+
+    <div class="c-thanks" id="c-thanks">
+      <div class="c-check" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Thank you.</h3>
+      <p>Your message is on its way — I read every note myself and will get back to you soon.</p>
+    </div>
   </div>
   <div class="c-links" data-reveal>
     <a href="https://www.linkedin.com/in/chandramanpatil" target="_blank" rel="noopener">LinkedIn</a>
@@ -1515,6 +1591,72 @@ $$("[data-scroll]").forEach(function(a){
       onEnterBack: function(){ running = true; }
     });
   }
+})();
+
+/* ---------------------------------------------------------- */
+/* contact form — Formspree submission + elegant thank-you      */
+/* ---------------------------------------------------------- */
+(function contactForm(){
+  var form = $("#c-form"); if (!form) return;
+  var status = $("#c-status"), thanks = $("#c-thanks"), submitBtn = $("#c-submit");
+
+  /* Set this to your Formspree (or equivalent) endpoint, e.g. "https://formspree.io/f/xxxxxxxx" */
+  var ENDPOINT = "FORMSPREE_ENDPOINT_HERE";
+
+  var fields = {
+    name:    { el: $("#c-name"),    test: function(v){ return v.trim().length > 0; } },
+    email:   { el: $("#c-email"),   test: function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); } },
+    message: { el: $("#c-message"), test: function(v){ return v.trim().length > 0; } }
+  };
+
+  function setError(key, on){
+    var wrap = fields[key].el.closest(".c-field");
+    if (wrap) wrap.classList.toggle("err", on);
+  }
+  function validate(){
+    var ok = true;
+    Object.keys(fields).forEach(function(k){
+      var valid = fields[k].test(fields[k].el.value);
+      setError(k, !valid);
+      if (!valid) ok = false;
+    });
+    return ok;
+  }
+  Object.keys(fields).forEach(function(k){
+    fields[k].el.addEventListener("input", function(){ setError(k, false); status.textContent = ""; });
+  });
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    status.textContent = "";
+    if (!validate()){ status.textContent = "Please fix the highlighted fields."; return; }
+    if ($("#c-hp").value){ return; } /* honeypot tripped — silently drop */
+
+    if (ENDPOINT.indexOf("FORMSPREE_ENDPOINT_HERE") !== -1){
+      status.textContent = "Form isn't connected to an email endpoint yet.";
+      return;
+    }
+
+    submitBtn.disabled = true;
+    var prevLabel = submitBtn.innerHTML;
+    submitBtn.innerHTML = "Sending…";
+
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    }).then(function(res){
+      if (!res.ok) throw new Error("bad status");
+      form.classList.add("hide");
+      thanks.classList.add("show");
+      form.reset();
+    }).catch(function(){
+      status.textContent = "Something went wrong — please email chandraman.patil@gmail.com directly.";
+    }).finally(function(){
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = prevLabel;
+    });
+  });
 })();
 
 /* ---------------------------------------------------------- */
