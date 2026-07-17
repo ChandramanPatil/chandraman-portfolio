@@ -230,9 +230,13 @@ body.cursor-hover #cursor-ring{
 /* ---------- navigation ---------- */
 #nav{
   position:fixed; top:0; left:0; right:0; z-index:950;
-  display:flex; align-items:center; justify-content:flex-end;
+  display:flex; align-items:center; justify-content:space-between;
   padding:26px var(--gutter);
   mix-blend-mode:difference;
+}
+#nav .brand{
+  font-weight:640; font-stretch:112%; font-size:14px; letter-spacing:.02em;
+  white-space:nowrap;
 }
 #nav .n-right{ display:flex; align-items:center; gap:34px; font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; }
 #nav #clock{ color:var(--ink-2); }
@@ -360,27 +364,34 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 /* ============================================================
    02 · IDENTITY
    ============================================================ */
-#identity .id-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:6vw; align-items:start; }
+#identity .id-grid{ display:grid; grid-template-columns:1fr .9fr; gap:7.5vw; align-items:start; }
 .id-words-wrap{ position:relative; }
 .id-words-wrap::before{
-  content:""; position:absolute; right:-4%; top:46%; width:62%; aspect-ratio:1;
+  content:""; position:absolute; right:-14%; top:46%; width:70%; aspect-ratio:1;
   transform:translateY(-50%); pointer-events:none;
-  background:radial-gradient(closest-side, rgba(53,242,164,.16), transparent 72%);
-  filter:blur(34px);
+  background:radial-gradient(closest-side, rgba(53,242,164,.2), transparent 72%);
+  filter:blur(38px);
 }
 .id-portrait{
-  position:absolute; right:-2%; bottom:-5%; z-index:0;
-  width:clamp(240px,23vw,400px); pointer-events:none;
+  position:absolute; right:-16%; bottom:-9%; z-index:0;
+  width:clamp(300px,32vw,540px); pointer-events:none;
   filter:saturate(1.05) contrast(1.03) drop-shadow(0 26px 60px rgba(0,0,0,.6));
   -webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent 98%);
           mask-image:linear-gradient(to bottom,#000 74%,transparent 98%);
 }
-.id-words{ position:relative; z-index:1; display:flex; flex-direction:column; gap:.4vh; margin-top:5vh; }
-.id-words .hollow{ font-size:clamp(2.9rem,7.8vw,8.6rem); }
-.id-copy{ max-width:56ch; display:flex; flex-direction:column; gap:1.6em; font-size:clamp(1.25rem,1.5vw,1.45rem); color:var(--ink-2); font-weight:360; }
+.id-words{ position:relative; z-index:1; display:flex; flex-direction:column; gap:.4vh; margin-top:5vh; max-width:76%; }
+.id-words .hollow{ font-size:clamp(2.6rem,6.8vw,7.4rem); }
+.id-copy{ max-width:52ch; display:flex; flex-direction:column; gap:1.6em; font-size:clamp(1.25rem,1.5vw,1.45rem); color:var(--ink-2); font-weight:360; }
 .id-copy strong{ color:var(--ink); font-weight:520; }
-.collab{ position:relative; z-index:1; margin-top:4vh; font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); line-height:2.4; }
-.collab b{ color:var(--ink-2); font-weight:500; }
+.collab{
+  position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw;
+  margin-top:8vh; padding:3.2vh var(--gutter);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  background:rgba(53,242,164,.03);
+  font-family:var(--f-m); font-size:clamp(13px,1.4vw,17px); letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-2); line-height:2.1; text-align:center;
+}
+.collab b{ color:var(--em); font-weight:500; }
 
 /* ============================================================
    03 · JOURNEY — horizontal documentary timeline
@@ -408,7 +419,7 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 /* ============================================================
    04 · RESEARCH — the exhibition
    ============================================================ */
-#research .r-note{ font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); margin:-2rem 0 5rem; }
+#research .r-note{ font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); margin:3vh 0 5rem; }
 #research .r-note a{ color:var(--em-dim); } #research .r-note a:hover{ color:var(--em); }
 .r-list{ border-top:1px solid var(--line); }
 .rrow{
@@ -445,6 +456,47 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 .r-meta .r-cites{ display:block; font-size:clamp(1.5rem,2.4vw,2.2rem); letter-spacing:0; color:var(--ink); font-family:var(--f-d); font-weight:220; }
 .rrow:hover .r-cites{ color:var(--em); }
 .r-all{ display:flex; justify-content:flex-end; padding-top:4vh; }
+
+/* ============================================================
+   03B · PATENTS — granted work, exhibition style
+   ============================================================ */
+#patents .p-note{ font-family:var(--f-m); font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-3); margin:3vh 0 5rem; }
+.pat-list{ border-top:1px solid var(--line); }
+.patrow{
+  display:grid; grid-template-columns:86px 1fr auto; gap:3vw; align-items:baseline;
+  padding:44px 0 40px; border-bottom:1px solid var(--line);
+  position:relative; transition:padding .5s var(--ease);
+}
+.patrow::before{
+  content:""; position:absolute; inset:0 -2vw; background:linear-gradient(90deg, rgba(53,242,164,.05), transparent 60%);
+  opacity:0; transition:opacity .5s var(--ease); pointer-events:none;
+}
+.patrow:hover::before, .patrow:focus-within::before{ opacity:1; }
+.patrow .r-idx{ font-family:var(--f-m); font-size:12px; letter-spacing:.24em; color:var(--ink-3); transition:color .4s; }
+.patrow:hover .r-idx{ color:var(--em); }
+.patrow .r-main h3{
+  font-weight:440; font-stretch:102%; font-size:clamp(1.2rem,2.2vw,1.9rem);
+  line-height:1.18; letter-spacing:-.015em; max-width:34ch;
+  transition:transform .55s var(--ease), color .4s;
+}
+.patrow:hover .r-main h3{ transform:translateX(14px); }
+.patrow .r-sub{
+  max-height:0; opacity:0; overflow:hidden;
+  transition:max-height .6s var(--ease), opacity .5s var(--ease), margin .5s var(--ease);
+  color:var(--ink-2); font-size:.95rem; max-width:64ch;
+}
+.patrow:hover .r-sub, .patrow:focus-within .r-sub{ max-height:150px; opacity:1; margin-top:16px; }
+.patrow .r-badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+.patrow .r-badges em{
+  font-style:normal; font-family:var(--f-m); font-size:9.5px; letter-spacing:.24em; text-transform:uppercase;
+  border:1px solid var(--line-2); border-radius:99px; padding:6px 13px; color:var(--ink-2);
+}
+.patrow .r-badges em.aw{ border-color:rgba(53,242,164,.4); color:var(--em); }
+.patrow .r-meta{ text-align:right; font-family:var(--f-m); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); line-height:2.1; }
+.patrow .r-meta .r-cites{ display:block; font-size:clamp(1rem,1.3vw,1.3rem); letter-spacing:0; color:var(--ink); font-family:var(--f-d); font-weight:420; margin-bottom:4px; }
+.patrow:hover .r-cites{ color:var(--em); }
+.pat-inventors{ margin-top:4vh; font-family:var(--f-m); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); line-height:2; }
+.pat-inventors b{ color:var(--em); font-weight:500; }
 
 /* ============================================================
    05 · SYSTEMS — animated expertise
@@ -685,6 +737,7 @@ footer a:hover{ color:var(--em); }
   .hm-tr,.hm-br{ display:none; }
   #identity .id-grid{ grid-template-columns:1fr; }
   .id-portrait{ width:min(56vw,320px); right:0; opacity:.9; }
+  .id-words{ max-width:100%; }
   .j-wrap{ height:auto; padding:2vh 0 4vh; }
   .j-track{ flex-direction:column; width:auto; padding:0 var(--gutter); }
   .j-panel{ width:auto; margin:0 0 7vh; padding-right:0; }
@@ -692,6 +745,9 @@ footer a:hover{ color:var(--em); }
   .rrow{ grid-template-columns:1fr; gap:14px; }
   .rrow .r-meta{ text-align:left; display:flex; gap:22px; align-items:baseline; }
   .rrow .r-sub{ max-height:none; opacity:1; margin-top:12px; }
+  .patrow{ grid-template-columns:1fr; gap:14px; }
+  .patrow .r-meta{ text-align:left; display:flex; gap:22px; align-items:baseline; }
+  .patrow .r-sub{ max-height:none; opacity:1; margin-top:12px; }
   .project,.project.rev{ grid-template-columns:1fr; }
   .project.rev .p-visual{ order:0; }
   .p-bleed .p-inner{ grid-template-columns:1fr; }
@@ -732,6 +788,7 @@ footer a:hover{ color:var(--em); }
 
 <!-- ======================= NAVIGATION ======================= -->
 <header id="nav">
+  <a class="brand" href="#hero" data-scroll>Dr. Chandraman S. Patil</a>
   <div class="n-right">
     <span id="clock" aria-hidden="true">00:00:00</span>
     <button id="menu-btn" aria-expanded="false" aria-controls="menu">Menu <span class="mi" aria-hidden="true"></span></button>
@@ -744,9 +801,10 @@ footer a:hover{ color:var(--em); }
       <a href="#identity" data-scroll><sup>01</sup>Identity</a>
       <a href="#journey" data-scroll><sup>02</sup>Journey</a>
       <a href="#research" data-scroll><sup>03</sup>Research</a>
-      <a href="#work" data-scroll><sup>04</sup>Flagship&nbsp;Work</a>
-      <a href="#recognition" data-scroll><sup>05</sup>Recognition</a>
-      <a href="#contact" data-scroll><sup>06</sup>Contact</a>
+      <a href="#patents" data-scroll><sup>04</sup>Patents</a>
+      <a href="#work" data-scroll><sup>05</sup>Flagship&nbsp;Work</a>
+      <a href="#recognition" data-scroll><sup>06</sup>Recognition</a>
+      <a href="#contact" data-scroll><sup>07</sup>Contact</a>
     </div>
     <div class="m-side">
       <span class="m-cap">Elsewhere</span>
@@ -764,6 +822,7 @@ footer a:hover{ color:var(--em); }
   <a href="#identity" data-scroll data-dot="identity"><i></i><span>Identity</span></a>
   <a href="#journey" data-scroll data-dot="journey"><i></i><span>Journey</span></a>
   <a href="#research" data-scroll data-dot="research"><i></i><span>Research</span></a>
+  <a href="#patents" data-scroll data-dot="patents"><i></i><span>Patents</span></a>
   <a href="#systems" data-scroll data-dot="systems"><i></i><span>Systems</span></a>
   <a href="#work" data-scroll data-dot="work"><i></i><span>Work</span></a>
   <a href="#numbers" data-scroll data-dot="numbers"><i></i><span>Measures</span></a>
@@ -835,17 +894,17 @@ footer a:hover{ color:var(--em); }
           <span class="hollow">Builder.</span>
         </div>
       </div>
-      <div class="collab" data-reveal>
-        <b>Research across</b> — GWU · University of Florida · NIST · Naval Research Lab · UCLA · UT Austin · UPenn · imec/Ghent
-      </div>
     </div>
     <div>
       <div class="id-copy">
         <p data-reveal>I design, nano-fabricate, and test <strong>photonic and optoelectronic devices</strong> — the light-speed hardware beneath next-generation computing, communication, and sensing.</p>
         <p data-reveal>My doctoral work at George Washington University helped establish <strong>strainoptronics</strong> — bending 2D crystals to control how they see light — published in <strong>Nature Photonics</strong> and now cited more than 360 times. Along the way I invented an automated <strong>2D Material Transfer System</strong> that Applied Physics Reviews named a Featured Article of the Year.</p>
-        <p data-reveal>Today I take the same rigor from the cleanroom to the concrete: leading the deployment of <strong>autonomous mobile robot fleets</strong> in live warehouses — customers, infrastructure, research, end to end.</p>
+        <p data-reveal>Today I engineer systems across twelve orders of magnitude—from nanometer-scale photonic devices to warehouse-scale autonomous robot fleets.</p>
       </div>
     </div>
+  </div>
+  <div class="collab" data-reveal>
+    <b>Research across</b> — GWU · Univ. of Florida · NIST · Naval Research Lab · UCLA · UT Austin · UCB · Univ. of Virginia · Univ. of Illinois · Queens College · TSMC
   </div>
 </section>
 
@@ -916,7 +975,7 @@ footer a:hover{ color:var(--em); }
 <section id="research" class="sec" aria-label="Selected research">
   <div class="label" data-reveal><span class="tick-dot"></span>03 — Selected Research</div>
   <h2 class="h-ed" data-reveal>Publications,<br>hung like <em class="serif gl">exhibition pieces.</em></h2>
-  <p class="r-note" data-reveal>1,019 citations · h-index 14 · <a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar, July 2026 ↗</a></p>
+  <p class="r-note" data-reveal><a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar, July 2026 ↗</a></p>
 
   <div class="r-list">
     <a class="rrow" href="https://www.nature.com/articles/s41566-020-0647-4" target="_blank" rel="noopener" data-reveal>
@@ -979,9 +1038,40 @@ footer a:hover{ color:var(--em); }
   </div>
 </section>
 
+<!-- ====================== 04 · PATENTS ======================= -->
+<section id="patents" class="sec" aria-label="Patents">
+  <div class="label" data-reveal><span class="tick-dot"></span>04 — Patents</div>
+  <h2 class="h-ed" data-reveal>Inventions,<br>filed and <em class="serif gl">granted.</em></h2>
+  <p class="p-note" data-reveal>Two families, spanning nanophotonic devices and photonic computing hardware.</p>
+
+  <div class="pat-list">
+    <a class="patrow" href="https://patentcenter.uspto.gov/applications/17771763" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">01</span>
+      <span class="r-main">
+        <h3>Integrated photonic device utilizing strained 2D material</h3>
+        <span class="r-sub">Two electrodes connected through a two-dimensional material — molybdenum ditelluride — with mechanical strain tuned to narrow its band gap. The same architecture can act as a photodetector, a light emitter, or a modulator depending on configuration.</span>
+        <span class="r-badges"><em class="aw">&#10022; Granted</em><em>The George Washington University</em><em>24 claims</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">US 12,072,542 B2</span>Granted Aug 27, 2024<br>Filed Nov 20, 2020</span>
+    </a>
+    <a class="patrow" href="https://patentcenter.uspto.gov/applications/19273647" target="_blank" rel="noopener" data-reveal>
+      <span class="r-idx">02</span>
+      <span class="r-main">
+        <h3>High-speed optical neural network hardware accelerator using adiabatic elimination-based ITO optical logic gates</h3>
+        <span class="r-sub">A reconfigurable photonic logic-gate architecture built from ITO plasmonic waveguides — the same physical gate becomes AND, OR, XOR, or any Boolean function by tuning input wavelength and voltage. Chained into a systolic array, it runs convolutional neural network math entirely in light.</span>
+        <span class="r-badges"><em>Published Application</em><em>University of Florida</em><em>7 inventors</em></span>
+      </span>
+      <span class="r-meta"><span class="r-cites">US 2026/0029686 A1</span>Published Jan 29, 2026<br>Filed Jul 18, 2025</span>
+    </a>
+  </div>
+  <div class="pat-inventors" data-reveal>
+    <b>Co-inventors</b> — Rishi Maiti · Volker Sorger · Hamed Dalir · Elham Heidari · Navid Asadi-Zanjani · Jiachi Ye · Belal Jahannia · Qian Cai
+  </div>
+</section>
+
 <!-- ====================== 05 · SYSTEMS ====================== -->
 <section id="systems" class="sec" aria-label="Systems of expertise">
-  <div class="label" data-reveal><span class="tick-dot"></span>04 — Systems of Expertise</div>
+  <div class="label" data-reveal><span class="tick-dot"></span>05 — Systems of Expertise</div>
   <h2 class="h-ed" data-reveal>Four disciplines,<br><em class="serif gl">one instrument.</em></h2>
 
   <div class="t-grid" data-reveal>
@@ -1056,8 +1146,8 @@ footer a:hover{ color:var(--em); }
         </svg>
       </div>
       <h3>Photonic AI &amp; Accelerators</h3>
-      <p>Neural networks that run on light — optical logic gates, femtojoule-per-bit modulators, and hybrid optical-electronic processors for computing at photon speed.</p>
-      <div class="t-tags">Optical logic · 1 fJ/bit modulation · OAM neural nets · tensor cores</div>
+      <p>Neural networks that run on light — optical logic gates, energy efficient modulators, and hybrid optical-electronic processor components for computing at photon speed.</p>
+      <div class="t-tags">Optical logic · Modulation · OAM neural nets · Edge Computing</div>
     </div>
 
     <div class="t-card">
@@ -1092,7 +1182,7 @@ footer a:hover{ color:var(--em); }
 
 <!-- ==================== 06 · FLAGSHIP WORK ================== -->
 <section id="work" class="sec" aria-label="Flagship work">
-  <div class="label" data-reveal><span class="tick-dot"></span>05 — Flagship Work</div>
+  <div class="label" data-reveal><span class="tick-dot"></span>06 — Flagship Work</div>
   <h2 class="h-ed" data-reveal>Four chapters<br>of <em class="serif gl">applied physics.</em></h2>
 
   <article class="project" data-reveal>
@@ -1133,7 +1223,7 @@ footer a:hover{ color:var(--em); }
       <ul class="p-metrics">
         <li><b>Venue</b><span class="em-c">Nature Photonics · journal cover · 2020</span></li>
         <li><b>Impact</b><span>360+ citations</span></li>
-        <li><b>Patent</b><span>US 2022/0373751 A1 — strained 2D photonic device</span></li>
+        <li><b>Patent</b><span>US 12,072,542 B2 — granted Aug 2024</span></li>
         <li><b>Press</b><span>Science Daily · Phys.org · GW Today</span></li>
       </ul>
     </div>
@@ -1163,7 +1253,7 @@ footer a:hover{ color:var(--em); }
       <h3>Computing at the <em class="serif">speed of light.</em></h3>
       <p class="p-desc">Photonic AI hardware: coupling-based ITO modulators reaching toward 1 fJ/bit, reconfigurable optical logic gates, and hybrid optical-electronic neural networks that untangle structured light through atmospheric turbulence.</p>
       <ul class="p-metrics">
-        <li><b>Patent</b><span class="em-c">Optical NN accelerator — US App. 19/273,647 · 2026</span></li>
+        <li><b>Patent</b><span class="em-c">US 2026/0029686 A1 — published Jan 2026</span></li>
         <li><b>Efficiency</b><span>1 fJ/bit monolithic modulation</span></li>
         <li><b>Result</b><span>OAM demultiplexing via hybrid CNN — Comms. Physics</span></li>
         <li><b>Where</b><span>GWU → University of Florida ECE</span></li>
@@ -1184,7 +1274,7 @@ footer a:hover{ color:var(--em); }
         <circle class="node n-em" cx="70" cy="60" r="4"/><circle class="node n-em" cx="135" cy="115" r="4" style="animation-delay:.4s"/>
         <circle class="node n-em" cx="200" cy="170" r="4" style="animation-delay:.8s"/><circle class="node n-em" cx="265" cy="225" r="4" style="animation-delay:1.2s"/>
         <circle class="node n-em" cx="330" cy="280" r="4" style="animation-delay:1.6s"/>
-        <text x="200" y="316" text-anchor="middle" fill="rgba(53,242,164,.7)" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="6">1 fJ / BIT</text>
+        <text x="200" y="316" text-anchor="middle" fill="rgba(53,242,164,.7)" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="1.5">PICO-FEMTO JOULES / BIT</text>
       </svg>
       <span class="pv-cap">Photonic crossbar — optical logic mesh</span>
     </div>
@@ -1204,14 +1294,14 @@ footer a:hover{ color:var(--em); }
       <li><b>Role</b><span class="em-c">Lead Robotics Research Engineer</span></li>
       <li><b>Scope</b><span>End-to-end: research → integration → scale</span></li>
       <li><b>Systems</b><span>AMR · AGV · UGV fleets</span></li>
-      <li><b>Base</b><span>Cary, North Carolina</span></li>
+      <li><b>Base</b><span>California, North Carolina</span></li>
     </ul>
   </div>
 </section>
 
 <!-- ====================== 07 · MEASURES ===================== -->
 <section id="numbers" class="sec" aria-label="Measures">
-  <div class="label" data-reveal><span class="tick-dot"></span>06 — Measures</div>
+  <div class="label" data-reveal><span class="tick-dot"></span>07 — Measures</div>
   <h2 class="h-ed" data-reveal>The record,<br><em class="serif gl">in numbers.</em></h2>
 
   <div class="num-grid" data-reveal>
@@ -1238,7 +1328,7 @@ footer a:hover{ color:var(--em); }
 
 <!-- ==================== 09 · RECOGNITION ==================== -->
 <section id="recognition" class="sec" aria-label="Recognition">
-  <div class="label" data-reveal><span class="tick-dot"></span>07 — Recognition</div>
+  <div class="label" data-reveal><span class="tick-dot"></span>08 — Recognition</div>
   <h2 class="h-ed" data-reveal>Awards, juries,<br>and <em class="serif gl">rolling credits.</em></h2>
 
   <ul class="cred" data-reveal>
@@ -1248,6 +1338,8 @@ footer a:hover{ color:var(--em); }
     <li><span class="c-what">Journal cover</span><span class="c-who">Nature Photonics — strain-engineered MoTe&#8322; photodetector</span><span class="c-when">2020</span></li>
     <li><span class="c-what">Journal cover</span><span class="c-who">ACS Applied Electronic Materials — strain-induced transport</span><span class="c-when">2021</span></li>
     <li><span class="c-what">Featured Article of the Year</span><span class="c-who">Applied Physics Reviews — 2D Material Transfer System</span><span class="c-when">2022</span></li>
+    <li><span class="c-what">US Patent granted</span><span class="c-who">12,072,542 B2 — strained 2D photonic device, with GWU</span><span class="c-when">2024</span></li>
+    <li><span class="c-what">US Patent Application published</span><span class="c-who">2026/0029686 A1 — optical neural network accelerator, with UF</span><span class="c-when">2026</span></li>
     <li><span class="c-what">In the press</span><span class="c-who">Science Daily · Phys.org · GW Today</span><span class="c-when">2020</span></li>
     <li><span class="c-what">Peer reviewer</span><span class="c-who">Optica · Nanophotonics · EPJ Quantum Technology</span><span class="c-when">Ongoing</span></li>
     <li><span class="c-what">Review Editor</span><span class="c-who">Frontiers in Electronics — Flexible Electronics editorial board</span><span class="c-when">Ongoing</span></li>
@@ -1256,7 +1348,7 @@ footer a:hover{ color:var(--em); }
 
 <!-- ===================== 10 · TRAJECTORY ==================== -->
 <section id="vision" class="sec" aria-label="Trajectory">
-  <div class="label" data-reveal><span class="tick-dot"></span>08 — Trajectory</div>
+  <div class="label" data-reveal><span class="tick-dot"></span>09 — Trajectory</div>
   <h2 class="h-ed" data-reveal>Where the work<br>goes <em class="serif gl">next.</em></h2>
 
   <div class="v-list" data-reveal>
@@ -1270,7 +1362,7 @@ footer a:hover{ color:var(--em); }
 
 <!-- ====================== 11 · CONTACT ====================== -->
 <section id="contact" class="sec" aria-label="Contact">
-  <div class="label" style="justify-content:center" data-reveal><span class="tick-dot"></span>09 — Contact</div>
+  <div class="label" style="justify-content:center" data-reveal><span class="tick-dot"></span>10 — Contact</div>
   <h2 class="c-head" data-reveal>Let&rsquo;s build <em class="serif">the future</em><br>together.</h2>
   <p class="c-sub" data-reveal>Research collaborations, robotics deployments, speaking, or a hard problem that needs both a scientist and an engineer — the door is open.</p>
   <div class="c-form-wrap" data-reveal>
@@ -1336,7 +1428,7 @@ body.menu-open #menu{ transform:translateY(0); visibility:visible; transition:tr
 .portrait-wrap{ width:clamp(280px,30vw,470px); }
 .portrait-wrap img{ max-height:74vh; width:auto; margin:0 auto; }
 @media (max-width:900px){ .portrait-wrap img{ max-height:60vh; } }
-@media (max-width:540px){ #clock{ display:none; } }
+@media (max-width:540px){ #clock{ display:none; } #nav .brand{ font-size:11px; } }
 #loader{ transition:opacity .9s var(--ease), visibility 0s linear .9s; }
 body.loaded #loader{ opacity:0; visibility:hidden; pointer-events:none; }
 </style>
@@ -1845,7 +1937,7 @@ ScrollTrigger.create({
 
 (function dots(){
   var map = { humro: "work" };
-  var ids = ["hero","identity","journey","research","systems","work","humro","numbers","philosophy","recognition","vision","contact"];
+  var ids = ["hero","identity","journey","research","patents","systems","work","humro","numbers","philosophy","recognition","vision","contact"];
   function setDot(name){
     $$("#dots a").forEach(function(a){ a.classList.toggle("active", a.getAttribute("data-dot") === name); });
   }
