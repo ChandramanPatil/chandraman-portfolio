@@ -300,14 +300,14 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
   line-height:.86; letter-spacing:-.018em; white-space:nowrap;
 }
 .name-line .char{ will-change:transform; }
-.nl-back{ position:relative; z-index:1; color:var(--ink); }
+.nl-back{ position:relative; z-index:1; color:var(--ink); transform:translateY(-.3em); }
 .nl-front{ position:relative; z-index:3; margin-top:.22em;
   color:transparent; -webkit-text-stroke:1.5px rgba(238,240,234,.9);
   text-shadow:0 24px 60px rgba(0,0,0,.7);
 }
 .nl-front .fill{ color:var(--ink); -webkit-text-stroke:0; }
 .hero-dr{
-  display:block; margin-bottom:clamp(.4rem,1.6vh,1.1rem);
+  display:block; margin-bottom:clamp(1.6rem,5vh,3.4rem);
   font-family:var(--f-s); font-style:italic; font-size:clamp(1.2rem,2.6vw,2.2rem);
   color:var(--em); text-shadow:0 0 30px rgba(53,242,164,.35);
 }
@@ -352,9 +352,9 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 .ticker .t-track{ display:flex; width:max-content; animation:tick 46s linear infinite; }
 .ticker span{
   font-family:var(--f-m); font-size:11px; letter-spacing:.4em; text-transform:uppercase;
-  color:var(--ink-2); padding:0 34px; white-space:nowrap;
+  color:var(--ink-2); white-space:nowrap;
 }
-.ticker span b{ color:var(--em); font-weight:400; padding-right:34px; }
+.ticker span b{ color:var(--em); font-weight:400; margin:0 22px; display:inline-block; }
 @keyframes tick{ to{ transform:translateX(-50%); } }
 
 /* ============================================================
@@ -485,9 +485,9 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 .stack-strip .s-track{ display:flex; width:max-content; animation:tick 64s linear infinite; }
 .stack-strip span{
   font-family:var(--f-m); font-size:13.5px; letter-spacing:.28em; text-transform:uppercase;
-  color:var(--ink-2); padding:0 30px; white-space:nowrap;
+  color:var(--ink-2); white-space:nowrap;
 }
-.stack-strip span b{ color:var(--em); font-weight:400; padding-left:30px; }
+.stack-strip span b{ color:var(--em); font-weight:400; margin:0 20px; display:inline-block; }
 
 /* ============================================================
    06 · FLAGSHIP WORK
@@ -808,13 +808,13 @@ footer a:hover{ color:var(--em); }
   <div class="hero-meta hm-br" id="hm-br">
     Currently<br>
     <span class="em-c">Lead Robotics Research Engineer</span><br>
-    HUMRO — Cary, NC
+    HUMRO — CA, NC
   </div>
 
   <div class="ticker" id="ticker" aria-hidden="true">
     <div class="t-track">
-      <span>Scientist<b>&nbsp;&#10022;</b></span><span>Engineer<b>&nbsp;&#10022;</b></span><span>Inventor<b>&nbsp;&#10022;</b></span><span>Researcher<b>&nbsp;&#10022;</b></span><span>Builder<b>&nbsp;&#10022;</b></span><span>Speaker<b>&nbsp;&#10022;</b></span>
-      <span>Scientist<b>&nbsp;&#10022;</b></span><span>Engineer<b>&nbsp;&#10022;</b></span><span>Inventor<b>&nbsp;&#10022;</b></span><span>Researcher<b>&nbsp;&#10022;</b></span><span>Builder<b>&nbsp;&#10022;</b></span><span>Speaker<b>&nbsp;&#10022;</b></span>
+      <span>Scientist<b>&#10022;</b></span><span>Engineer<b>&#10022;</b></span><span>Inventor<b>&#10022;</b></span><span>Researcher<b>&#10022;</b></span><span>Builder<b>&#10022;</b></span><span>Speaker<b>&#10022;</b></span>
+      <span>Scientist<b>&#10022;</b></span><span>Engineer<b>&#10022;</b></span><span>Inventor<b>&#10022;</b></span><span>Researcher<b>&#10022;</b></span><span>Builder<b>&#10022;</b></span><span>Speaker<b>&#10022;</b></span>
     </div>
   </div>
 </section>
@@ -996,8 +996,8 @@ footer a:hover{ color:var(--em); }
         </svg>
       </div>
       <h3>Photonic Integrated Circuits</h3>
-      <p>Design, nano-fabrication, and characterization of on-chip optical devices — modulators, detectors, resonators — measured on ultra-high-bandwidth benches beyond 100&nbsp;GHz.</p>
-      <div class="t-tags">Si &amp; SiN platforms · electro-optics · ring resonators · &gt;100 GHz metrology</div>
+      <p>Design, nano-fabrication, and characterization of on-chip optical devices — modulators, detectors, resonators, waveguide arrays — measured on ultra-high-bandwidth benches beyond 100&nbsp;GHz.</p>
+      <div class="t-tags">Si &amp; SiN platforms · Electro-Optics · ITO/TCOs · Ring Resonators ·  Metrology</div>
     </div>
 
     <div class="t-card">
@@ -1029,7 +1029,7 @@ footer a:hover{ color:var(--em); }
       </div>
       <h3>2D Materials &amp; Strainoptronics</h3>
       <p>Atomically thin semiconductors — MoTe&#8322;, InSe, graphene, MXenes — integrated onto photonics, with mechanical strain as a design dial for how they absorb and emit light.</p>
-      <div class="t-tags">TMDCs · MXenes · ITO / TCOs · hybrid integration · strain engineering</div>
+      <div class="t-tags">TMDCs · MXenes · Topological Insulators · Hybrid Integration · Strain Engineering</div>
     </div>
 
     <div class="t-card">
