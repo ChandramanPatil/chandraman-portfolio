@@ -495,8 +495,6 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 .patrow .r-meta{ text-align:right; font-family:var(--f-m); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); line-height:2.1; }
 .patrow .r-meta .r-cites{ display:block; font-size:clamp(1rem,1.3vw,1.3rem); letter-spacing:0; color:var(--ink); font-family:var(--f-d); font-weight:420; margin-bottom:4px; }
 .patrow:hover .r-cites{ color:var(--em); }
-.pat-inventors{ margin-top:4vh; font-family:var(--f-m); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-3); line-height:2; }
-.pat-inventors b{ color:var(--em); font-weight:500; }
 
 /* ============================================================
    05 · SYSTEMS — animated expertise
@@ -597,12 +595,12 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
 /* ============================================================
    07 · MEASURES — editorial numbers
    ============================================================ */
-#numbers .num-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.num{ padding:7vh 2vw 6vh; border-right:1px solid var(--line); }
+#numbers .num-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(245px,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.num{ padding:7vh 1.6vw 6vh; border-right:1px solid var(--line); min-width:0; }
 .num:last-child{ border-right:0; }
 .num .n-val{
-  font-weight:190; font-stretch:112%; font-size:clamp(3rem,5.6vw,6rem);
-  line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums;
+  font-weight:190; font-stretch:112%; font-size:clamp(2.2rem,4.2vw,4.6rem);
+  line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums; white-space:nowrap;
 }
 .num .n-val i{ font-style:normal; color:var(--em); font-weight:300; }
 .num .n-lab{ margin-top:18px; font-family:var(--f-m); font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-3); line-height:2; }
@@ -975,7 +973,7 @@ footer a:hover{ color:var(--em); }
 <section id="research" class="sec" aria-label="Selected research">
   <div class="label" data-reveal><span class="tick-dot"></span>03 — Selected Research</div>
   <h2 class="h-ed" data-reveal>Publications,<br>hung like <em class="serif gl">exhibition pieces.</em></h2>
-  <p class="r-note" data-reveal><a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar, July 2026 ↗</a></p>
+  <p class="r-note" data-reveal><a href="https://scholar.google.com/citations?user=6lqEg0QAAAAJ" target="_blank" rel="noopener">Google Scholar, <span data-scholar-asof>July 2026</span> ↗</a></p>
 
   <div class="r-list">
     <a class="rrow" href="https://www.nature.com/articles/s41566-020-0647-4" target="_blank" rel="noopener" data-reveal>
@@ -1045,6 +1043,7 @@ footer a:hover{ color:var(--em); }
   <p class="p-note" data-reveal>Two families, spanning nanophotonic devices and photonic computing hardware.</p>
 
   <div class="pat-list">
+<!-- PATENTS:START -->
     <a class="patrow" href="https://patentcenter.uspto.gov/applications/17771763" target="_blank" rel="noopener" data-reveal>
       <span class="r-idx">01</span>
       <span class="r-main">
@@ -1063,9 +1062,7 @@ footer a:hover{ color:var(--em); }
       </span>
       <span class="r-meta"><span class="r-cites">US 2026/0029686 A1</span>Published Jan 29, 2026<br>Filed Jul 18, 2025</span>
     </a>
-  </div>
-  <div class="pat-inventors" data-reveal>
-    <b>Co-inventors</b> — Rishi Maiti · Volker Sorger · Hamed Dalir · Elham Heidari · Navid Asadi-Zanjani · Jiachi Ye · Belal Jahannia · Qian Cai
+<!-- PATENTS:END -->
   </div>
 </section>
 
@@ -1254,7 +1251,7 @@ footer a:hover{ color:var(--em); }
       <p class="p-desc">Photonic AI hardware: coupling-based ITO modulators reaching toward 1 fJ/bit, reconfigurable optical logic gates, and hybrid optical-electronic neural networks that untangle structured light through atmospheric turbulence.</p>
       <ul class="p-metrics">
         <li><b>Patent</b><span class="em-c">US 2026/0029686 A1 — published Jan 2026</span></li>
-        <li><b>Efficiency</b><span>1 fJ/bit monolithic modulation</span></li>
+        <li><b>Efficiency</b><span>monolithic modulation</span></li>
         <li><b>Result</b><span>OAM demultiplexing via hybrid CNN — Comms. Physics</span></li>
         <li><b>Where</b><span>GWU → University of Florida ECE</span></li>
       </ul>
@@ -1305,11 +1302,11 @@ footer a:hover{ color:var(--em); }
   <h2 class="h-ed" data-reveal>The record,<br><em class="serif gl">in numbers.</em></h2>
 
   <div class="num-grid" data-reveal>
-    <div class="num"><div class="n-val"><span data-count="1019" data-comma="1">0</span><i>+</i></div><div class="n-lab">Citations<br>Google Scholar</div></div>
-    <div class="num"><div class="n-val"><span data-count="73">0</span></div><div class="n-lab">Publications<br>journals · conferences</div></div>
-    <div class="num"><div class="n-val"><span data-count="14">0</span></div><div class="n-lab">h-index</div></div>
-    <div class="num"><div class="n-val"><span data-count="23">0</span></div><div class="n-lab">i10-index</div></div>
-    <div class="num"><div class="n-val"><span data-count="2">0</span></div><div class="n-lab">Patent families<br>granted app · pending</div></div>
+    <div class="num"><div class="n-val"><span data-metric="citations" data-count="1038" data-comma="1">0</span><i>+</i></div><div class="n-lab">Citations<br>Google Scholar</div></div>
+    <div class="num"><div class="n-val"><span data-metric="publications" data-count="73">0</span></div><div class="n-lab">Publications<br>journals · conferences</div></div>
+    <div class="num"><div class="n-val"><span data-metric="hindex" data-count="14">0</span></div><div class="n-lab">h-index</div></div>
+    <div class="num"><div class="n-val"><span data-metric="i10" data-count="24">0</span></div><div class="n-lab">i10-index</div></div>
+    <div class="num"><div class="n-val"><span data-metric="patents" data-count="2">0</span></div><div class="n-lab">Patents<br>granted · published</div></div>
   </div>
   <div class="num-foot" data-reveal>
     NCSA nanoMFG Fellow<i>&#10022;</i>MOC Best-Paper Award, Japan<i>&#10022;</i>3 journal cover / feature awards<i>&#10022;</i>Reviewer — Optica · Nanophotonics · EPJ Quantum Tech
@@ -1849,11 +1846,11 @@ function heroIntro(){
     }, { passive: true });
   }
   gsap.timeline({ scrollTrigger: { trigger: "#hero", start: "top top", end: "bottom top", scrub: true } })
-    .to("#portrait", { yPercent: 16, scale: 1.08 }, 0)
-    .to("#nl-back",  { yPercent: -34, opacity: .3 }, 0)
-    .to("#nl-front", { yPercent: 30 }, 0)
-    .to(".hero-glow",{ opacity: .35 }, 0)
-    .to(".hero-meta",{ opacity: 0, y: -24 }, 0);
+    .fromTo("#portrait", { yPercent: 0, scale: 1 }, { yPercent: 16, scale: 1.08, immediateRender: false }, 0)
+    .fromTo("#nl-back",  { yPercent: 0, opacity: 1 }, { yPercent: -34, opacity: .3, immediateRender: false }, 0)
+    .fromTo("#nl-front", { yPercent: 0 }, { yPercent: 30, immediateRender: false }, 0)
+    .fromTo(".hero-glow",{ opacity: 1 }, { opacity: .35, immediateRender: false }, 0)
+    .fromTo(".hero-meta",{ opacity: 1, y: 0 }, { opacity: 0, y: -24, immediateRender: false }, 0);
 })();
 
 /* --- generic reveals --- */
