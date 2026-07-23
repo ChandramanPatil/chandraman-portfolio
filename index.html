@@ -1616,7 +1616,7 @@ $$("[data-scroll]").forEach(function(a){
     for (var i = 0; i < n; i++){
       particles.push({
         x: Math.random() * W,
-        base: H * (0.18 + Math.random() * 0.64),
+        base: H * (0.32 + Math.random() * 0.56),
         amp: 8 + Math.random() * 26,
         k: 0.004 + Math.random() * 0.008,
         speed: 0.25 + Math.random() * 0.8,
@@ -1644,7 +1644,7 @@ $$("[data-scroll]").forEach(function(a){
     ctx.lineWidth = 1;
     for (var l = 0; l < 3; l++){
       ctx.beginPath();
-      var by = H * (0.3 + l * 0.2);
+      var by = H * (0.36 + l * 0.18);
       for (var x = 0; x <= W; x += 16){
         var y = by + Math.sin(x * 0.006 + t * (1 + l * 0.4)) * 18
                    + Math.sin(x * 0.013 - t * 0.7) * 8;
