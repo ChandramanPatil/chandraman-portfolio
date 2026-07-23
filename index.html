@@ -366,22 +366,8 @@ body.menu-open #menu-btn .mi::after{ top:4.5px; transform:rotate(-45deg); }
    ============================================================ */
 #identity .id-grid{ display:grid; grid-template-columns:1fr .9fr; gap:7.5vw; align-items:start; }
 .id-words-wrap{ position:relative; }
-.id-words-wrap::before{
-  content:""; position:absolute; right:-6%; top:56%; width:46%; aspect-ratio:1;
-  transform:translateY(-50%); pointer-events:none;
-  background:radial-gradient(closest-side, rgba(53,242,164,.2), transparent 72%);
-  filter:blur(38px);
-}
-.id-portrait{
-  position:absolute; right:-8%; bottom:-4%; z-index:0;
-  width:clamp(200px,20vw,340px); max-height:56vh; height:auto;
-  pointer-events:none;
-  filter:saturate(1.05) contrast(1.03) drop-shadow(0 26px 60px rgba(0,0,0,.6));
-  -webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent 98%);
-          mask-image:linear-gradient(to bottom,#000 74%,transparent 98%);
-}
-.id-words{ position:relative; z-index:1; display:flex; flex-direction:column; gap:.4vh; margin-top:5vh; max-width:76%; }
-.id-words .hollow{ font-size:clamp(2.6rem,6.8vw,7.4rem); }
+.id-words{ position:relative; z-index:1; display:flex; flex-direction:column; gap:.4vh; margin-top:5vh; }
+.id-words .hollow{ font-size:clamp(2.9rem,7.6vw,8.2rem); }
 .id-copy{ max-width:52ch; display:flex; flex-direction:column; gap:1.6em; font-size:clamp(1.25rem,1.5vw,1.45rem); color:var(--ink-2); font-weight:360; }
 .id-copy strong{ color:var(--ink); font-weight:520; }
 .collab{
@@ -735,7 +721,6 @@ footer a:hover{ color:var(--em); }
   .portrait-wrap{ width:min(74vw,380px); bottom:-4vh; }
   .hm-tr,.hm-br{ display:none; }
   #identity .id-grid{ grid-template-columns:1fr; }
-  .id-portrait{ width:min(56vw,320px); max-height:48vh; right:0; opacity:.9; }
   .id-words{ max-width:100%; }
   .j-wrap{ height:auto; padding:2vh 0 4vh; }
   .j-track{ flex-direction:column; width:auto; padding:0 var(--gutter); }
@@ -885,7 +870,6 @@ footer a:hover{ color:var(--em); }
   <div class="id-grid">
     <div>
       <div class="id-words-wrap">
-        <img class="id-portrait" src="assets/hero-left.webp" alt="Dr. Chandraman S. Patil" loading="lazy">
         <div class="id-words" aria-hidden="true">
           <span class="hollow">Scientist.</span>
           <span class="hollow">Engineer.</span>
